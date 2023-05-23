@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個專-cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+       
+        body{
+            background-image: url(background.png);
+        
+        }
+        .header{
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('Mask group.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            
+        }
+        .header-logo{
+            z-index: 1;
+            margin-left: 100px;
+        }
+        .header-logo img{
+            width: 90px;
+            height: 161px;
+            margin: 0 0 0 100px;
+        }
+        .header-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            background-color: #0009;
+            box-sizing: border-box;
+            color: white;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .header-container h1{
+            font-size: 26px;
+            color: white;
+            padding: 10px;
+        }
+       
+        .header-container .nav a{
+           padding: 10px;
+            color: white;
+        }
+        .nav-list-box{
+            width: 1080px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-left: 200px;
+            top: 100%;
+        }
+        .nav-list-box a{
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        .icon-container{
+            width: 300px;
+            display: flex;
+            font-size: 14px;
+        
+        }
+
+        /* 結帳流程 */
+        .list{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+            width:1200px;
+            list-style: none;
+            padding-top: 60px;
+            }
+        .list li{
+            display: flex;
+            flex-direction: column;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            /* background-color:#9B866A; */
+            border: 1px solid #784A43 ;
+           justify-content: center;
+            text-align: center;
+            position: relative;
+            font-size: 16px;
+            color: #784A43 ;
+            }
+        .list .first{
+            background-color: #784A43;
+            color: white;
+        }
+       
+        .list li + li{
+            margin-left: 200px;
+        }
+        .list li + li::before{
+            content:'';
+            position: absolute;
+            width: 200px;
+            height: 2px;
+            background-color:#784A43 ;
+            top: 0;
+            bottom: 0;  
+            margin: auto;
+            left: -200px;
+        }
+        .box{
+            width: 1200px;
+            display: flex;
+            justify-content: center;
+            margin: auto;
+        }
+        .box .text{
+            display: flex;
+            justify-content: center;
+            margin: auto;
+           
+        }
+        .box span{
+            width: 50px;
+            text-align: center;
+            font-size: 12px;
+            color: #784A43 ;
+        }
+        .text span+span{
+            margin-left: 200px;
+        }
+        /* 結帳資訊 */
+        .cart-info{
+            width: 1200px;
+            display: flex;
+            margin: auto;
+            flex-direction: column;
+        }
+        .cart-info h2{
+            color: #784A43;
+        }
+        .cart-info-nav{
+            width: 1200px;
+            display: flex;
+            justify-content:space-around;
+            /* margin: auto; */
+            border-bottom: 2px solid #784A43;
+           padding: 5px;
+           box-sizing: border-box;
+            color: #784A43;
+
+        }
+        .product-list{
+            display: flex;
+            /* margin: auto; */
+            /* justify-content:space-between; */
+            /* background-color: aqua; */
+            align-items: center;
+            margin-top: 20px;
+            
+        }
+        .product-name{
+            width: 200px;
+            flex-grow: 1;
+            padding-left: 5px;
+            font-size: 16px;
+        }
+        .product-price{
+            flex-grow: 1.35;
+            /* width: 100px; */
+            font-weight: bolder;
+        }
+        .product-quantity{
+            flex-grow: 1.35;
+
+        }
+        .product-cost{
+            flex-grow: 0.6;
+            font-weight: bolder;
+        }
+        .input-num{
+            width: 50px;
+            text-align: center;
+            border: none;
+        }
+        .product-quantity button{
+            width: 20px;
+            border: none;
+            background-color: white;
+        }
+
+        /* 付款,物流方式 */
+        .checkout-block{
+            margin-top: 40px;
+            width: 1200px;
+            display: flex;
+            margin: auto;
+            justify-content: space-between;
+            padding-top: 60px;
+            box-sizing: border-box;
+        }
+        .checkout-delivery, .order-information{
+            width: 400px;
+            padding: 5px;
+        }
+        .checkout-delivery h3, .order-information h3{
+            border-bottom: 2px solid #784A43;
+            color: #784A43;
+        }
+        .checkout-delivery p,.order-information p{
+            padding-top: 20px;
+        }
+        .delivery-type .type, .payment{
+            border: none;
+        }
+        .order-information .subtotal, .freight, .total{
+            display: flex;
+            justify-content: space-between;
+        }
+        .order-information .total{
+            /* padding-top: 20px; */
+            border-top: 2px solid #784A43;
+            color: #784A43;
+        }
+        .order-information span{
+            font-weight: bolder;
+        }
+        .order-information .freight{
+            padding-bottom: 80px;
+        }
+        .order-information .pay{
+            text-align: center;
+            padding-top: 20px;  
+        }
+
+        .order-information .pay a{
+            color: white;
+            font-weight: bolder;
+            text-decoration: none;
+            background-color: #784A43;
+            padding: 5px 50px 5px 50px;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        /* 訂購須知 */
+        .notice{
+            width: 1200px;
+            padding: 20px;
+            /* display: flex; */
+            margin: auto;
+        }
+        .notice h3{
+            font-size: 14px;
+            color: #784A43;
+            border-bottom: 1px solid #784A43;
+        }
+        .notice li{
+            padding-top: 10px;
+            font-size: 12px;
+            text-indent: 10px;
+        }
+        .notice span{
+            font-size: 12px;
+            color: #784A43;
+        }
+         /* 頁尾 */
+        .main-footer{
+            margin-top: 40px;
+            width: 100%;
+            height: 120px;
+            background-color:#784A43;
+            display: flex;
+            /* margin: auto; */
+            /* justify-content: space-around; */
+            /* position: relative; */
+            
+        }
+        .footer{
+            width: 60px;
+            margin: 10px;
+            align-items: center;
+            margin-left:200px;
+        }
+        .footer-block{
+            display:flex;
+            justify-content: space-around;
+            flex-direction: column;
+            /* align-content: space-between; */
+            /* text-align: end; */
+            margin-left: 650px;
+            /* position: relative; */
+            /* left: 200px; */
+        }
+        .footer .footer-item{
+            display: flex;
+            width: 500px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .footer-icon{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 3px;
+        }
+        .footer-block .footer-list{
+            display:flex;
+            padding: 5px;
+        }
+        .footer-list a{
+            color: aliceblue;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .footer-icon a{
+            color: white;
+            padding: 2px;
+        }
+        .footer-text{
+            background-color:#A61F1F;
+            margin: 10px;
+            padding: 5px;
+            color: white;
+            font-size: 12px;
+        }
+        .icon-top{
+            height: 40px;
+            display: flex;
+            margin-left: -60px;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .icon-top img{
+            height: 40px;
+            width: 40px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="#">
+            <img src="headerlogo1.png" alt="標題logo">
+            </a>
+        </div>
+        <div class="header-container">
+            <nav class="nav">
+                <div class="nav-list-box">
+                    <a href="http://127.0.0.1:5500/33_menu.html">炙・菜單<br></a>
+                    <a href="http://127.0.0.1:5500/33_about.html">關於炙造所<br></a>
+                    <a href="http://127.0.0.1:5500/33_delivery.html">宅配到府<br></a>
+                    <a href="http://127.0.0.1:5500/33_news.html">最新情報<br></a>
+                </div>
+                <div class="icon-container">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="http://127.0.0.1:5500/33_login.html"><i class="fa-solid fa-user"></i></a>
+                    <a href="http://127.0.0.1:5500/33_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </nav>
+            <h1>購物車</h1>
+        </div>
+    </div>
+
+    <!-- 結帳流程 -->
+    <div class="cart">
+        <ol class="list">
+            <li class="first">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ol>
+        <div class="box">
+            <div class="text">
+                <span>購物車</span>
+                <span>填寫資料</span>
+                <span>訂單確認</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 購物車結帳資訊 -->
+    <div class="cart-info">
+        <h2>購物車</h2>
+
+        <div class="cart-info-nav">
+            <span>商品資料</span>
+            <span>單價</span>
+            <span>數量</span>
+            <span>小計</span>
+        </div>
+
+        <!-- 商品明細 -->
+        <div class="product-list">
+            <div class="product-pic">
+                <img src="海陸總匯.jpeg" width="68" height="71" alt="商品照">
+            </div>
+            <div class="product-name">
+                <span>精選組合｜職人嚴選-海陸饗宴</span>
+            </div>
+        <!-- 單價 !-->
+            <div class="product-price"> 
+                NT$3,680
+            </div>
+            <div class="product-quantity">
+                <button class="minus">-</button>
+                <input type="text" class="input-num" value="1">
+                <button class="plus">+</button>
+            </div>
+            </form>
+        <!-- 小計 !-->
+            <div class="product-cost"> 
+                NT$3,680
+            </div>
+            <div class="delet">          
+                <i class="fa-solid fa-xmark"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- 送貨及付款方式 -->
+    <div class="checkout-block">
+        <div class="checkout-delivery">
+            <h3>選擇送貨及付款方式</h3>
+            <form class="delivery-type">
+                <p>送貨方式</p>
+                <select name="" id="" class="type">
+                    <option value="">黑貓宅配</option>
+                    <option value="">711超商取貨</option>
+                    <option value="">全家超商取貨</option>
+                </select>
+
+                <p>付款方式</p>
+                <select name="" id="" class="payment">
+                    <option value="">LINEPAY</option>
+                    <option value="">信用卡(Visa/Master/JCB)</option>
+                    <option value="">貨到付款</option>
+                </select>
+            </form>
+        </div>
+        <div class="order-information">
+            <h3>訂單資訊</h3>
+            <div class="subtotal">
+                <p>小計:</p>
+                <p>NT$<span>3,680</span></p>
+            </div>
+            <div class="freight">
+                <p>運費:</p>
+                <p>NT$<span>60</span></p>
+            </div>
+            <div class="total">
+                <p>合計</p>
+                <p>NT<span>3,740</span></p>
+            </div>
+            <div class="pay">
+                <a href="#">前往結賬</a>
+            </div>
+        </div>
+    </div>
+
+<!-- 訂購須知 -->
+<div class="notice">
+    <h3>＊＊＊下單前請特別留意＊＊＊</h3>
+    <ul>
+        <li>電子發票將會在出貨後統一以email方式寄出，請特別留意email是否正確，以免收不到發票</li>
+        <li>收件地址、電話請務必填寫正確，以免物流人員無法聯繫，導致延後配送時間。</li>
+        <li>完成付款後，預計3~5個工作天（不含假日）安排出貨。</li>
+        <li>線上購買統一配送方式為宅配，無法店取。</li>
+    </ul>
+    <span>官網保有活動最終修改解釋權，若有任何問題歡迎在訂單中留言!謝謝您的訂購。</span>
+</div>
+
+  <!-- 頁尾 -->
+<div class="main-footer">
+    <div class="footer">
+        <div class="footer-logo">
+            <img src="smalllogo .png" alt="小logo">
+        </div>
+        <div class="footer-icon">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+    </div>
+    <div class="footer-block">
+        <div class="footer-item">
+            <div class="footer-list">
+                 <a href="#">會員專區</a>
+                <a href="#">常見問題</a>
+                <a href="#">菁英招募</a>
+                <a href="#">集團品牌</a>
+                <a href="#">聯絡我們</a>
+            </div>
+        </div>
+            <div class="footer-text">
+                <p>商品擺盤請以現場實物為準，產品形象圖中之擺盤裝飾物係為示意圖。</p>
+            </div>
+    </div> 
+    <div class="icon-top">
+        <img src="top.png" alt="">
+    </div>
+</div>
+
+
+</body>
+</html>

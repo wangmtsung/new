@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>個專-news</title>
+    <style>
+       *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+       
+        body{
+            background-image: url(background.png);
+        
+        }
+        .header{
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            /* margin: auto; */
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('Mask group.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            
+        }
+        .header-logo{
+            z-index: 1;
+            margin-left: 100px;
+        }
+        .header-logo img{
+            width: 90px;
+            height: 161px;
+            margin: 0 0 0 100px;
+        }
+        .header-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            background-color: #0009;
+            box-sizing: border-box;
+            color: white;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .header-container h1{
+            font-size: 26px;
+            color: white;
+            padding: 10px;
+        }
+       
+        .header-container .nav a{
+           padding: 10px;
+            color: white;
+        }
+        .nav-list-box{
+            width: 1080px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-left: 200px;
+            top: 100%;
+        }
+        .nav-list-box a{
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        .icon-container{
+            width: 300px;
+            display: flex;
+            font-size: 14px;
+        
+        }
+        /* 最新消息 */
+        .news-grid{
+            max-width:  960px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .news-card{
+            display: flex;
+            align-items: center;
+            align-content: center;
+            /* border: 1px solid #784A43; */
+            box-shadow: 5px 5px 5px 0 #0005;
+            
+        }
+        .news-card img{
+            width: 161px;
+            height: 150px;
+            vertical-align: top;
+            box-shadow: 3px 3px 3px 0 #0005;
+        }
+        .news-card:first-child {
+            grid-area: 1/1/4/2;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px;
+            font-size: 14px;
+        }
+        
+        .news-card:first-child img{
+            width: 465px;
+            height: 325px;
+        }
+        .news-card .news-txt{
+            height: 100%;
+            width: auto;
+            padding: 5px;
+        /* text-align: center; */
+    }
+        
+        .news-card .news-txt a{
+            text-decoration: none;
+            color:#784A43;
+        }
+        .news-card .news-txt h3{
+            font-size:16px;
+            padding-left: 10px;  
+        }
+        .news-card .news-txt p{
+         font-size: 14px; 
+         padding-left: 10px;  
+        }
+        .news-card .news-txt time{
+            font-size: 12px;
+            color: #A61F1F;
+            padding-left: 10px;  
+        }
+        .more-box{
+            width: 960px;
+            display: flex;
+            margin: auto;
+            /* background-color: aqua; */
+            margin-top: 20px;
+            
+        }
+        .more-box .more-btn{
+            margin: auto;
+            text-decoration: none;
+            background-color:#784A43;
+            padding: 5px;
+            box-shadow: 2px 2px 2px 0 #0005
+            /* justify-content: center; */
+        }
+        .more-btn a{
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+       /* 頁尾 */
+       .main-footer{
+            margin-top: 40px;
+            width: 100%;
+            height: 120px;
+            background-color:#784A43;
+            display: flex;
+            /* margin: auto; */
+            /* justify-content: space-around; */
+            /* position: relative; */
+            
+        }
+        .footer{
+            width: 60px;
+            margin: 10px;
+            align-items: center;
+            margin-left:200px;
+        }
+        .footer-block{
+            display:flex;
+            justify-content: space-around;
+            flex-direction: column;
+            /* align-content: space-between; */
+            /* text-align: end; */
+            margin-left: 650px;
+            /* position: relative; */
+            /* left: 200px; */
+        }
+        .footer .footer-item{
+            display: flex;
+            width: 500px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .footer-icon{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 3px;
+        }
+        .footer-block .footer-list{
+            display:flex;
+            padding: 5px;
+        }
+        .footer-list a{
+            color: aliceblue;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .footer-icon a{
+            color: white;
+            padding: 2px;
+        }
+        .footer-text{
+            background-color:#A61F1F;
+            margin: 10px;
+            padding: 5px;
+            color: white;
+            font-size: 12px;
+        }
+        .icon-top{
+            height: 40px;
+            display: flex;
+            margin-left: -60px;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .icon-top img{
+            height: 40px;
+            width: 40px;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="#">
+            <img src="headerlogo1.png" alt="標題logo">
+            </a>
+        </div>
+        <div class="header-container">
+            <nav class="nav">
+                <div class="nav-list-box">
+                    <a href="#">炙・菜單<br></a>
+                    <a href="#">關於炙造所<br></a>
+                    <a href="#">宅配到府<br></a>
+                    <a href="#">最新情報<br></a>
+                </div>
+                <div class="icon-container">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#"><i class="fa-solid fa-user"></i></a>
+                    <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </nav>
+            <h1>最新情報</h1>
+        </div>
+    </div>
+<!-- 最新消息 -->
+
+    <div class="news-grid">
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="最新消息首圖.jpeg"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>賀！炙造所創立五週年啦～</h3></a>
+                <a href="#"><p>感謝大家一直以來對我們炙造所的支持與愛護！五週年紀念活動即將開始，特別為所有凡壽星準備了豐厚的獎勵——凡是在活動期間到店打卡並按讚的壽星，即可獲得我們店家提供的三片極品和牛！
+                讓我們一起來慶祝燒肉店五週年紀念，並共同創造一個美好的回憶！</p></a>
+                <time>2023_01_01</time>
+            </div>
+        </div>
+       
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="啤酒買一送一.png"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>沁涼一下～</h3></a>
+                <a href="#"><p>屬於沁涼脾啤酒的季節即將來臨,麒麟一番搾買一送一！</p></a>
+                <time>2022_05_20</time>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="感謝優你.png"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>感謝優你！</h3></a>
+                <a href="#"><p>使用Uber外送訂購服務滿額即送好禮!</p></a>
+                <time>2023_03_25</time>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="除夕店休.png"></a>
+            </div>
+            <a href=""><div class="news-txt"></a>
+                <a href="#"><h3>春節營業時間調整公告</h3></a>
+                <a href="#"><p>春節期間,回家團聚囉～</p></a>
+                <time>2022_12_20</time>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="uber logo.png"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>防疫優你！</h3></a>
+                <a href="#"><p>防疫期間使用Uber外送訂購服務免運,滿額再送好禮！</p></a>
+                <time>2022_03_25</time>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="早鳥招待.jpeg"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>早鳥招待！</h3></a>
+                <a href="#"><p>即日起預約5/7-5/14,即贈雪花牛,雪花豬,梅花豬招待！</p></a>
+                <time>2022_03_25</time>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="4週年快樂圖.png"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>炙造所生日快樂！</h3></a>
+                <a href="#"><p>凡當月壽星,只要出示證件,即可免費獲得雪花牛肉一盤！</p></a>
+                <time>2022_01_01</time>
+            </div>
+        </div>
+        <div class="news-card">
+            <div class="news-pic">
+                <a href="#"><img src="news 五倍券.jpeg"></a>
+            </div>
+            <div class="news-txt">
+                <a href="#"><h3>五倍券放大！</h3></a>
+                <a href="#"><p>即日起凡使用五倍卷消費,滿一千折一百,替你的5倍券放大再放大!</p></a>
+                <time>2021_09_25</time>
+            </div>
+        </div>
+    </div>
+    <div class="more-box">
+        <div class="more-btn">
+            <a href="#">查看更多</a>
+        </div>
+    </div>
+      <!-- 頁尾 -->
+    <div class="main-footer">
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="smalllogo .png" alt="小logo">
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-block">
+            <div class="footer-item">
+                <div class="footer-list">
+                     <a href="#">會員專區</a>
+                    <a href="#">常見問題</a>
+                    <a href="#">菁英招募</a>
+                    <a href="#">集團品牌</a>
+                    <a href="#">聯絡我們</a>
+                </div>
+            </div>
+                <div class="footer-text">
+                    <p>商品擺盤請以現場實物為準，產品形象圖中之擺盤裝飾物係為示意圖。</p>
+                </div>
+        </div> 
+        <div class="icon-top">
+            <img src="top.png" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

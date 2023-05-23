@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>個專-delivery</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+       
+        body{
+            background-image: url(background.png);
+        
+        }
+        .header{
+            display: flex;
+            align-content: center;
+            flex-direction: column;
+            /* margin: auto; */
+            width: 100%;
+            top: 0;
+            left: 0;
+            background-image: url('Mask group.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+            
+        }
+        .header-logo{
+            z-index: 1;
+            margin-left: 100px;
+        }
+        .header-logo img{
+            width: 90px;
+            height: 161px;
+            margin: 0 0 0 100px;
+        }
+        .header-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+        }
+        .nav{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            background-color: #0009;
+            box-sizing: border-box;
+            color: white;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 1;
+        }
+        
+        .header-container h1{
+            font-size: 26px;
+            color: white;
+            padding: 10px;
+        }
+       
+        .header-container .nav a{
+           padding: 10px;
+            color: white;
+        }
+        .nav-list-box{
+            width: 1080px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            margin-left: 200px;
+            top: 100%;
+        }
+        .nav-list-box a{
+            text-decoration: none;
+            font-size: 16px;
+            margin-left: 60px;
+        }
+        .icon-container{
+            width: 300px;
+            display: flex;
+            font-size: 14px;
+        
+        }
+        /* 全部商品 */
+        .product-box{
+            margin-top: 40px;
+        }
+        .allproduct{
+            width: 1080px;
+            margin: auto;
+            display: flex;
+            /* background-color: #ccc; */
+            /* padding: 20px; */
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 20px;
+        }
+        .product-box .title{
+            width: 1080px;
+            display: flex;
+            margin: auto;
+            align-items: center;
+            padding-left:100px;
+        } 
+        
+        
+        h2{
+            color:#784A43;
+            text-align: center;
+            display: inline-block;
+            font-size: 18px;
+        }
+        .product-card{
+            width: 300px;
+            box-sizing: border-box;
+            padding: 10px;
+            margin: auto;
+            text-align: center;
+            
+        }
+        .product-pic{
+            width: 250px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            margin: auto;
+        }
+        .product-card .cart{
+            position: absolute;
+            inset: 10px;
+            padding: 20px;
+            background-color: #0005;
+            color: #fff;
+            transform: scale(0.5);
+            opacity: 0;
+            transition: .5s;
+            line-height: 30px;
+            /* align-items: center; */
+            box-shadow: 3px 3px 3px 3px #0005;
+            display: flex;
+            flex-direction: column;
+        }
+        .cart-icon{
+            padding-top: 40px;
+        }
+        .product-card:hover .cart{
+            transform: scale(1);
+            opacity: 1;
+            background-color: #000c;
+        }
+        .product-card .input-num{
+            width: 50px;
+            text-align: center;
+            border: none;
+            background-color: white;
+        }
+        .product-card .minus ,.product-card .plus{
+            width: 20px;
+            border: none;
+            background-color:white;
+        }
+        .cart-btn{
+            padding-top: 30px;
+        }
+        .cart-btn .btn{
+            padding: 5px;
+            text-align: center;
+            background-color: white;
+            
+        }
+        .product-card img{
+            width: 100%;
+            height: 230px;
+            box-shadow:5px 5px 5px 0 #0005;
+        }
+       
+        .producttext a{
+            color: black;
+            font-size: 16px;
+            text-decoration: none;
+        }
+        .producttext p{
+            color:#A61F1F;
+            font-size: 12px;
+        }
+        .producttext span{
+            font-size: 14px;
+            font-weight: bolder;
+            color: black;
+        }
+
+        /* 頁尾 */
+        .main-footer{
+            margin-top: 40px;
+            width: 100%;
+            height: 120px;
+            background-color:#784A43;
+            display: flex;
+            /* margin: auto; */
+            /* justify-content: space-around; */
+            /* position: relative; */
+            
+        }
+        .footer{
+            width: 60px;
+            margin: 10px;
+            align-items: center;
+            margin-left:200px;
+        }
+        .footer-block{
+            display:flex;
+            justify-content: space-around;
+            flex-direction: column;
+            /* align-content: space-between; */
+            /* text-align: end; */
+            margin-left: 650px;
+            /* position: relative; */
+            /* left: 200px; */
+        }
+        .footer .footer-item{
+            display: flex;
+            width: 500px;
+            text-align: center;
+            line-height: 30px;
+        }
+        .footer-icon{
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 3px;
+        }
+        .footer-block .footer-list{
+            display:flex;
+            padding: 5px;
+        }
+        .footer-list a{
+            color: aliceblue;
+            text-decoration: none;
+            margin: 5px;
+            font-size: 14px;
+        }
+        .footer-icon a{
+            color: white;
+            padding: 2px;
+        }
+        .footer-text{
+            background-color:#A61F1F;
+            margin: 10px;
+            padding: 5px;
+            color: white;
+            font-size: 12px;
+        }
+        .icon-top{
+            height: 40px;
+            display: flex;
+            margin-left: -60px;
+            align-items: center;
+            padding-top: 20px;
+        }
+        .icon-top img{
+            height: 40px;
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="#">
+            <img src="headerlogo1.png" alt="標題logo">
+            </a>
+        </div>
+        <div class="header-container">
+            <nav class="nav">
+                <div class="nav-list-box">
+                    <a href="http://127.0.0.1:5500/33_menu.html">炙・菜單<br></a>
+                    <a href="http://127.0.0.1:5500/33_about.html">關於炙造所<br></a>
+                    <a href="http://127.0.0.1:5500/33_delivery.html">宅配到府<br></a>
+                    <a href="http://127.0.0.1:5500/33_news.html">最新情報<br></a>
+                </div>
+                <div class="icon-container">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="http://127.0.0.1:5500/33_login.html"><i class="fa-solid fa-user"></i></a>
+                    <a href="http://127.0.0.1:5500/33_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </nav>
+            <h1>宅配到府</h1>
+        </div>
+    </div>
+
+    <!-- 全部商品 -->
+    <div class="product-box">
+        <div class="title"><h2>全部商品</h2></div><br>
+        <div class="allproduct">
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="海陸總匯.jpeg" alt="海陸饗宴">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#" >職人嚴選-海陸饗宴</a >
+                    <p>精選組合<br><span>NT$3,680</span></p>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="豪華.jpeg" alt="豪華饗宴">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">職人嚴選-豪華饗宴</a >
+                    <p>精選組合<br><span>NT$3,380</span></p>
+                </div>
+                
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="海陸總匯.jpeg" alt="海陸饗宴">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">職人嚴選-海陸饗宴</a>
+                    <p>精選組合<br><span>NT$3,680</span></p>
+                </div>
+                
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="帶骨牛小排1.png" alt="帶骨牛小排">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">美國安格斯CHOICE特選級牛小排</a>
+                    <p>單點美味<br><span>NT$310</span></p>
+                </div>
+                
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="沙朗1.png" alt="莎朗">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">美國安格斯CHOICE沙朗</a>
+                    <p>單點美味<br><span>NT$670</span></p>
+                </div>
+                
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="帶骨牛小排1.png" alt="紐約客">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">美國安格斯CHOICE特選級牛小排</a>
+                    <p>單點美味<br><span>NT$310</span></p>
+                </div>
+               
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="肋眼1.png" alt="肋眼">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">日本頂級A5和牛肋眼</a>
+                    <p>單點美味<br><span>NT$1,840</span></p>
+                </div>
+               
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="帶骨牛小排1.png" alt="p帶骨牛小排">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">美國安格斯CHOICE特選級牛小排</a>
+                    <p>單點美味<br><span>NT$310</span></p>
+                </div>
+               
+            </div>
+            <div class="product-card">
+                <div class="product-pic">
+                    <img src="頂級牛小排1.png" alt="頂級牛小排">
+                    <div class="cart">
+                        <div class="cart-icon">
+                            <button class="minus">-</button>
+                            <input type="text" class="input-num" value="1">
+                            <button class="plus">+</button>
+                        </div>
+                        <div class="cart-btn">
+                            <button class="btn">加入購物車</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="producttext">
+                    <a href="#">美國安格斯PRIME頂級牛小排</a>
+                    <p>單點美味<br><span>NT$760</span></p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <!-- 頁尾 -->
+    <div class="main-footer">
+        <div class="footer">
+            <div class="footer-logo">
+                <img src="smalllogo .png" alt="小logo">
+            </div>
+            <div class="footer-icon">
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+            </div>
+        </div>
+        <div class="footer-block">
+            <div class="footer-item">
+                <div class="footer-list">
+                     <a href="#">會員專區</a>
+                    <a href="#">常見問題</a>
+                    <a href="#">菁英招募</a>
+                    <a href="#">集團品牌</a>
+                    <a href="#">聯絡我們</a>
+                </div>
+            </div>
+                <div class="footer-text">
+                    <p>商品擺盤請以現場實物為準，產品形象圖中之擺盤裝飾物係為示意圖。</p>
+                </div>
+        </div> 
+        <div class="icon-top">
+            <img src="top.png" alt="">
+        </div>
+    </div>
+   
+</body>
+</html>
