@@ -350,21 +350,31 @@
 
         }
         .single-theme img{
-            border-radius: 50%;
+            width: 200px;
         }
-        /* .single-theme .ribs{
-            
-        } */
+        .single-theme .ribs{
+            background-color: white;    
+            padding: 5px;
+            box-shadow: 3px 3px 3px 0 #0005;
+        }
         .single-theme .sirloin{
             position: relative;
             top: 50px;
+            background-color: white; 
+            padding: 5px;
+            box-shadow: 3px 3px 3px 0 #0005;
         }
-        /* .single-theme .prime{
-
-        } */
+        .single-theme .prime{
+            background-color: white; 
+            padding: 5px;
+            box-shadow: 3px 3px 3px 0 #0005;
+        }
         .single-theme .a5{
             position: relative;
             top: 50px;
+            background-color: white; 
+            padding: 5px;
+            box-shadow: 3px 3px 3px 0 #0005;
         }
         /* 文字 */
         .single-theme a{
@@ -456,17 +466,40 @@
             color: white;
             font-size: 12px;
         }
-        .icon-top{
-            height: 40px;
-            display: flex;
-            margin-left: -60px;
-            align-items: center;
-            padding-top: 20px;
+        
+        /* top */
+        .toTop-arrow {
+            width: 2.5rem;
+            height: 2.5rem;
+            padding: 0;
+            margin: 0;
+            border: 0;
+            border-radius: 33%;
+            opacity: 0.6;
+            background: #000;
+            cursor: pointer;
+            position:fixed;
+            right: 4rem;
+            bottom: 3rem;
+            display: none;
         }
-        .icon-top img{
-            height: 40px;
-            width: 40px;
+        .toTop-arrow::before, .toTop-arrow::after {
+            width: 18px;
+            height: 5px;
+            border-radius: 3px;
+            background:white;
+            position: absolute;
+            content: "";
         }
+        .toTop-arrow::before {
+            transform: rotate(-45deg) translate(0, -50%);
+            left: 0.5rem;
+        }
+        .toTop-arrow::after {
+            transform: rotate(45deg) translate(0, -50%);
+            right: 0.5rem;
+        }
+        .toTop-arrow:focus {outline: none;}
 </style>
 <body>
     <div class="header">
@@ -680,7 +713,7 @@
      <div class="main-footer">
         <div class="footer">
             <div class="footer-logo">
-                <img src="pic/index-logo2.png" alt="小logo">
+                <a href="index.html"><img src="pic/index-logo2.png" alt="小logo"></a>
             </div>
             <div class="footer-icon">
                 <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -701,11 +734,22 @@
                     <p>商品擺盤請以現場實物為準，產品形象圖中之擺盤裝飾物係為示意圖。</p>
                 </div>
         </div> 
-        <div class="icon-top">
-            <img src="pic/top.png" alt="">
-        </div>
     </div>
-    
+    <button type="button" id="BackTop" class="toTop-arrow"></button>
+        <script>
+        $(function(){
+            $('#BackTop').click(function(){ 
+                $('html,body').animate({scrollTop:0}, 333);
+            });
+            $(window).scroll(function() {
+                if ( $(this).scrollTop() > 300 ){
+                    $('#BackTop').fadeIn(222);
+                } else {
+                    $('#BackTop').stop().fadeOut(222);
+                }
+            }).scroll();
+        });
+        </script>
 
     
 </body>
