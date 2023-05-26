@@ -1,0 +1,123 @@
+/* 關於我們 */
+.about-container{
+    width: 1080px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 40px;
+}
+.about-us{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.about-food{
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+}
+.about-us h2 ,.about-food h2{
+    color:#A61F1F;
+    font-weight: bolder;
+    writing-mode: vertical-lr;
+    display: flex;
+    justify-content: center;
+    letter-spacing: 10px;
+}
+.about-us .text, .about-food .text{
+    text-indent: 28px;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+.about-us p ,.about-food p{
+    font-size: 14px;
+}
+.about-us img , .about-food img{
+    width: 400px;
+    height: 300px;
+    box-shadow:  5px 5px 5px 0 #0005;
+}
+
+/* 店舖據點 */
+.location{
+    margin-top: 40px;
+    width: 1080px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.location-block{
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+
+}
+.location img{
+    width: 500px;
+    vertical-align: top;
+}
+.location h3{
+    width: 200px;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: #784A43;
+    color: white;
+}
+.location-block .pic{
+    padding: 10px;
+}
+.store-info{
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+    justify-content: space-around;
+    padding: 10px;
+}
+.location-select{
+    text-align: center;
+    padding: 10px;
+    color: #784A43;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 10px;
+}
+.store-info a{
+    text-decoration: none;
+    color: #784A43;
+    border: 1px solid #784A43;
+    padding: 0 0 0 5px;
+    
+}
+.store-info i{
+   color:#A61F1F;
+    
+}
+.location-select{
+    cursor: pointer;
+}
+.store-info .text{
+    display: flex;
+    justify-content: space-between;
+    align-content: space-around;
+    width: 500px;
+}
+.store-info .name{
+    width: 140px;
+    margin-left: 10px;
+    display: inline-block;
+    font-weight: bolder;
+}
+.store-info .address{
+    margin-left: 50px;
+    width: 280px;
+    display: inline-block;
+}

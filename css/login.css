@@ -1,0 +1,103 @@
+/* 會員登入 */
+.member-login{         
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #784A43;
+    width: 750px;
+    height: 550px;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+    
+}
+.login-item{
+    border-bottom: 1px solid #784A43;
+    display: flex;
+}
+.login-item .register,.login{
+    border: none;
+    background-color: rgba(0,0,0,0);
+    width: 385px;
+    height: 80px;
+    color:#784A43;
+    font-size: 20px;
+}
+.login-item a{
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-item .login {
+    background-color:#784A43;
+    color: white;
+}
+.socialmedia-login{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+.line-login{
+    width: 280px;
+    height: 30px;
+    background-color: #1EC903;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+.fb-login{
+    width: 280px;
+    height: 30px;
+    background-color: #435EAA;
+    border-radius: 5px;
+    letter-spacing: 3px;
+    padding: 5px;
+}
+.line-login .line-icon,.fb-login .fb-icon{
+    border: none;
+    font-size: 20px;
+    background-color: rgba(0,0,0,0);
+    color: white
+}
+.line-login a,.fb-login a{
+    text-decoration: none;
+    color: white;
+}
+.login-info{
+    color: #784A43;
+    padding: 20px;
+    font-size: 20px;
+}
+.account input,.password input{
+    border:none;
+    width: 400px;
+    height: 30px;
+    background-color:rgb(221, 216, 216);
+    border-radius: 3px;
+    margin: 10px;
+    padding: 3px;
+    letter-spacing: 2px;
+    padding-left: 10px;
+}
+::placeholder{
+    color: #784A43;
+    text-indent: 1em;
+}
+.start-shopping .start{
+    border: 1px solid #784A43;
+    width: 300px;
+    height: 40px;
+    border-radius: 5px;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0);
+    color: #784A43;
+    font-size: 18px;
+}
+.forget-password{
+    margin:20px;
+}
+.forget-password a{
+    text-decoration: none;
+    color: #784A43;
+    font-size: 14px;
+}

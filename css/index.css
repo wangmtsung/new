@@ -1,0 +1,489 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+body{
+    background-image: url(../pic/background.png);
+
+}
+.header{
+    width: 100%;
+    min-height: 720px;
+    /* height: 100vh; */
+    background-image: url(../pic/index-first.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+
+}
+.header-logo{
+    margin-left: 90px;
+}
+.header-logo img{
+    width: 290px;
+    height: 230px;
+}
+.header-container{
+    display: flex;
+    width: 1080px;
+    margin: auto;
+    justify-content: center;
+    margin-top: 10px;
+}
+.header-container .nav {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 200px;
+}
+.header-container .nav a{
+    writing-mode: vertical-lr;
+    text-decoration: none;
+    color: white;
+    font-size: 10px;
+    
+}
+.header-container .nav span{
+    font-size: 18px;
+}
+.icon-container{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 10px;
+    align-items: center;
+}
+.icon-container .icon-logo{
+    background-color:#A61F1F ;
+}
+.icon-container img{
+    width: 50px;
+    height: 60px;
+}
+.icon-container a{
+    writing-mode: vertical-lr;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 0 5px 0 ;
+    margin-top: 5px;
+}
+
+/* 炙造所 */
+.about{
+    width: 1080px;
+    display: flex;
+    margin: auto;
+    padding-top: 60px;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+.about h2{
+    writing-mode: vertical-lr;
+    color:#784A43 ;
+    letter-spacing: 5px;
+    text-align: center;
+    font-size: 28px;
+}
+.about .signature{
+    background-color: #A61F1F;
+    color: white;
+    font-size: 14px;
+    /* margin-top: 50px; */
+    padding: 5px 2px 5px 2px;
+    letter-spacing: 2px;
+}
+.about-text{
+    display: flex;
+    width: 300px;
+    padding: 10px;
+    margin: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+.about-pic{
+    box-shadow: 5px 5px 5px 0 #0005;
+}
+.about-pic img{
+    width: 500px;
+    height: 100%;
+}
+.about-title{
+    writing-mode: vertical-lr;
+    padding: 20px;
+}
+.about-title p{
+    font-size: 28px;
+    color: #A61F1F;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+.about-title span{
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0;
+    padding-top: 2px;
+}
+
+/* 五大保證 */
+.promise{
+    width: 1440px;
+    height: 750px;
+    margin-top: 60px;
+    background-image: url(../pic/index-pic3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    position: relative;
+}
+.wagyu{
+padding: 30px 90px 0 0 ;
+margin: 10px;
+display: flex;
+margin-left: auto;
+
+}
+.wagyu img{
+width: 150px;
+height: 150px;
+}
+.promise .text{
+width: 500px;
+display: flex;
+margin: auto;
+position: relative;
+top: 150px;
+text-align: center;
+justify-content: center;
+
+}
+.promise .text p{
+color: white;
+}
+.promise .icon-container{
+display: flex;
+align-content: space-around;
+}
+.promise .icon-pic{
+width: 500px;
+display: flex;
+justify-content: space-around;
+}
+
+/* 最新情報 */
+.news{
+width: 1080px;
+display: flex;
+margin: auto;
+justify-content: center;
+padding:60px 0 40px 0 ;
+}
+.new-container{
+width: 800px;
+display: flex;
+margin-left: 65px;
+padding: 0 20px 0 20px;
+}
+.news-pic img{
+/* width: 100px; */
+height: 180px;
+width: 100%;
+/* box-shadow: 3px 3px 3px 0 #0005; */
+
+}
+.news-card{
+text-align: center;
+background-color: white;
+margin: 3px;
+box-shadow: 3px 3px 3px 0 #0005;
+}
+.news-txt{
+padding: 10px;
+}
+.news-card a{
+text-decoration: none;
+}
+.news-txt p{
+color: #784A43;
+font-size: 16px;
+font-weight: bolder;
+}
+.news-txt span{
+color: #A61F1F;
+font-size: 12px;
+}
+.news-title{
+    writing-mode: vertical-lr;
+    padding-left: 40px;
+}
+.news-title p{
+    font-size: 28px;
+    color: #A61F1F;
+    font-weight: bolder;
+    letter-spacing: 5px;
+}
+.news-title span{
+    color: black;
+    font-weight: bold;
+    font-size: 12px;
+    letter-spacing: 0;
+    padding-top: 2px;
+}
+/* 查看更多 */
+.look-more{
+    display: flex;
+    width: 1080px;
+    margin: auto;
+    justify-content: center;
+    
+}
+.look-more p{
+background-color: #784A43;
+color: white;
+padding: 5px 10px 5px 10px;
+border-radius: 5px;
+box-shadow: 2px 2px 2px 0 #0005;
+}
+.look-more a{
+text-decoration: none;
+}
+
+/* 精選套餐 */
+.product-combo{
+width: 1080px;
+display: flex;
+margin: auto;
+justify-content: center;
+padding-top: 60px;
+}
+.product-combo .title{
+writing-mode: vertical-lr;
+/* padding: 0 20px 0 20px; */
+/* margin-right: 60px; */
+}
+.product-combo .title p{
+font-size: 28px;
+color: #A61F1F;
+font-weight: bolder;
+letter-spacing: 5px;
+}
+.product-combo .title span{
+color: black;
+font-weight: bold;
+font-size: 12px;
+letter-spacing: 0;
+padding-top: 2px;
+}
+.combo-box{
+width: 960px;
+display: flex;
+margin: auto;
+justify-content: space-around;
+/* flex-direction: column; */
+}
+.combo-card{
+width: 400px;
+padding: 10px;
+/* margin-right: 80px; */
+
+}
+.combo-card img{
+width: 100%;
+height: 350px;
+box-shadow: 3px 3px 3px 0 #0005;
+}
+.combo-card a{
+text-decoration: none;
+}
+.combo-txt{
+text-align: center;
+}
+.combo-txt h3{
+    font-size: 16px;
+    font-weight: bolder;
+    color: #784A43;
+}
+.combo-txt p{
+    font-size: 12px;
+    color: #A61F1F;
+ }
+.combo-txt span{
+    font-size: 14px;
+    font-weight: bolder;
+    color: black;
+  }
+
+/* 精選單品 */
+.single-product{
+    width: 1080px;
+    display: flex;
+    margin: auto;
+    padding-top: 60px;
+}
+.single-theme{
+    width: 1080px;
+    display: flex;
+    margin: auto;
+    justify-content: space-around;
+    text-align: center;
+    position: relative;
+
+}
+.single-theme img{
+    width: 200px;
+}
+.single-theme .ribs{
+    background-color: white;    
+    padding: 5px;
+    box-shadow: 3px 3px 3px 0 #0005;
+}
+.single-theme .sirloin{
+    position: relative;
+    top: 50px;
+    background-color: white; 
+    padding: 5px;
+    box-shadow: 3px 3px 3px 0 #0005;
+}
+.single-theme .prime{
+    background-color: white; 
+    padding: 5px;
+    box-shadow: 3px 3px 3px 0 #0005;
+}
+.single-theme .a5{
+    position: relative;
+    top: 50px;
+    background-color: white; 
+    padding: 5px;
+    box-shadow: 3px 3px 3px 0 #0005;
+}
+/* 文字 */
+.single-theme a{
+    text-decoration: none;
+}
+.single-theme h4{
+    font-size: 16px;
+    color: #784A43;
+    font-weight: bolder;
+}
+.single-theme p{
+    font-size: 12px;
+    color: #A61F1F;
+}
+.single-theme span{
+    font-size: 14px;
+    font-weight: bolder;
+    color: black;
+}
+.read-more{
+    display: flex;
+    width: 1080px;
+    margin: auto;
+    justify-content: center;
+    padding: 70px 0 20px 0;
+}
+.read-more p{
+background-color: #784A43;
+color: white;
+padding: 5px 10px 5px 10px;
+border-radius: 5px;
+box-shadow: 2px 2px 2px 0 #0005;
+}
+.read-more a{
+text-decoration: none;
+}
+/* 頁尾 */
+.main-footer{
+    margin-top: 40px;
+    width: 100%;
+    height: 120px;
+    background-color:#784A43;
+    display: flex;
+    
+}
+.footer{
+    width: 60px;
+    margin: 10px;
+    align-items: center;
+    margin-left:200px;
+}
+.footer-block{
+    display:flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-left: 650px;
+}
+.footer .footer-item{
+    display: flex;
+    width: 500px;
+    text-align: center;
+    line-height: 30px;
+}
+.footer-logo img{
+    width: 100%;
+}
+.footer-icon{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3px;
+}
+.footer-block .footer-list{
+    display:flex;
+    padding: 5px;
+}
+.footer-list a{
+    color: aliceblue;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 14px;
+}
+.footer-icon a{
+    color: white;
+    padding: 2px;
+}
+.footer-text{
+    background-color:#A61F1F;
+    margin: 10px;
+    padding: 5px;
+    color: white;
+    font-size: 12px;
+}
+
+/* top */
+.toTop-arrow {
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-radius: 33%;
+    opacity: 0.6;
+    background: #000;
+    cursor: pointer;
+    position:fixed;
+    right: 4rem;
+    bottom: 3rem;
+    display: none;
+}
+.toTop-arrow::before, .toTop-arrow::after {
+    width: 18px;
+    height: 5px;
+    border-radius: 3px;
+    background:white;
+    position: absolute;
+    content: "";
+}
+.toTop-arrow::before {
+    transform: rotate(-45deg) translate(0, -50%);
+    left: 0.5rem;
+}
+.toTop-arrow::after {
+    transform: rotate(45deg) translate(0, -50%);
+    right: 0.5rem;
+}
+.toTop-arrow:focus {outline: none;}

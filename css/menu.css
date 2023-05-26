@@ -1,0 +1,48 @@
+ /* 菜單 */
+ .menu-container{
+            
+    width: 1080px;
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+
+}
+.menu-container .card{
+    width: 400px;
+    box-shadow: 5px #000;
+    position: relative;
+    margin: 20px;
+    overflow: hidden;
+}
+.menu-container .txt{
+    position: absolute;
+    inset: 10px;
+    padding: 20px;
+    background-color: #0006;
+    color: #fff;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: .5s;
+    line-height: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.card:hover .txt{
+    transform: scale(1);
+    opacity: 1;
+    background-color: #000c;
+}
+.card img{
+    width: 100%;
+    vertical-align: top;
+}
+.menu-container .txt h2{
+    font-size: 16px;
+    text-align: center;
+}
+.menu-container .txt p{
+    font-size: 12px;
+    text-align: center;
+}
