@@ -46,9 +46,20 @@ body{
     font-size: 10px;
     padding: 10px 3px 20px 3px;
 }
-.header-container .nav-menu :hover{
-    background: #A61F1F;
+.header-container .nav-menu{
+    display: inline-block;
+    /* padding: 10px; */
+    cursor: pointer;
+    background-image: linear-gradient(to right,#A61F1F 0%, #A61F1F 0%);
+    background-size: 100% 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.5s;
+    border-radius: 5px;
     
+}
+        
+.header-container .nav-menu:hover{
+    background-size: 100% 100%;
 }
 .header-container .nav span{
     font-size: 18px;
@@ -196,7 +207,7 @@ padding: 0 20px 0 20px;
 }
 .news-pic img{
 /* width: 100px; */
-height: 220px;
+height: 200px;
 width: 100%;
 /* box-shadow: 3px 3px 3px 0 #0005; */
 
@@ -474,36 +485,20 @@ text-decoration: none;
     font-size: 12px;
 }
 
-/* top */
-.toTop-arrow {
-    width: 2.5rem;
-    height: 2.5rem;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    border-radius: 33%;
-    opacity: 0.6;
-    background: #000;
-    cursor: pointer;
-    position:fixed;
-    right: 4rem;
-    bottom: 3rem;
-    display: none;
-}
-.toTop-arrow::before, .toTop-arrow::after {
-    width: 18px;
-    height: 5px;
-    border-radius: 3px;
-    background:white;
-    position: absolute;
-    content: "";
-}
-.toTop-arrow::before {
-    transform: rotate(-45deg) translate(0, -50%);
-    left: 0.5rem;
-}
-.toTop-arrow::after {
-    transform: rotate(45deg) translate(0, -50%);
-    right: 0.5rem;
-}
-.toTop-arrow:focus {outline: none;}
+/* 往上按鈕 */
+#myBtn {
+    display: none; 
+    position: fixed; 
+    bottom: 30px; 
+    right: 50px; 
+    background:#000;
+    cursor: pointer; 
+    border: 1px rgba(255, 255, 255, 0.6) solid;
+    border-radius: 10px;
+    box-shadow: 0px 0px 3px #ffffff;
+    padding: 5px;
+    opacity: 0.5;
+  }
+  #myBtn:hover {
+    opacity:0.8; 
+  }

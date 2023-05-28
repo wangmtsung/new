@@ -85,3 +85,24 @@ body{
     font-size: 14px;
 
 }
+.nav-menu {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .nav-menu:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 0;
+    background-color: #A61F1F;
+    transition: width 0.3s;
+  }
+  
+  .nav-menu:hover:before {
+    width: 100%;
+  }
