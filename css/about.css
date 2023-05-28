@@ -50,6 +50,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 40px;
 }
 .location-block{
     display: flex;
@@ -70,9 +71,6 @@
     margin: 10px;
     background-color: #784A43;
     color: white;
-}
-.location-block .pic{
-    padding: 10px;
 }
 .store-info{
     width: 500px;
