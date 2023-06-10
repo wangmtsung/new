@@ -238,7 +238,7 @@ background-image: url(../pic/background.png);
     height: 250px;
 }
 .wagyu{
-    padding:5% 5% 10% 0 ;
+    padding:5% 10% 10% 0 ;
     display: flex;
     margin-left: auto;
 }
@@ -250,7 +250,7 @@ background-image: url(../pic/background.png);
     width: 350px;
     display: flex;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     text-align: center;
     justify-content: center;
 }
