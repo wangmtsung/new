@@ -1,9 +1,10 @@
-/* 會員登入 */
-.member-login{         
+  
+  /* -------------會員登入------------- */
+  .member-login{         
     display: flex;
     flex-direction: column;
     border: 2px solid #784A43;
-    width: 750px;
+    max-width: 750px;
     height: 550px;
     margin: auto;
     text-align: center;
@@ -35,7 +36,6 @@
 .socialmedia-login{
     display: flex;
     justify-content: space-around;
-    padding: 50px;
 }
 .line-login{
     width: 280px;
@@ -92,6 +92,7 @@
     background-color: rgba(0,0,0,0);
     color: #784A43;
     font-size: 18px;
+    cursor: pointer;
 }
 .forget-password{
     margin:20px;
@@ -100,4 +101,28 @@
     text-decoration: none;
     color: #784A43;
     font-size: 14px;
+}
+/* -------------手機版------------- */
+@media screen and (max-width: 768px) {
+    .member-login{
+        margin: 10px;
+    }
+    .socialmedia-login{
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        padding: 20px;
+    }
+    .line-login{
+        margin-bottom: 20px;
+    }
+    .account input,.password input{
+        width: 300px;
+    }
+}
+/* -------------桌機版------------- */
+@media screen and (min-width: 769px) {
+    .socialmedia-login{
+        padding: 50px;
+    }
 }

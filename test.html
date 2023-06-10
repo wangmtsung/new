@@ -195,67 +195,159 @@ h2{
     </style>
 </head>
 <body>
-    <div class="product-box">
-        <div class="title"><h2>全部商品</h2></div><br>
-        <div class="allproduct">
+        <div class="product-box">
+          <div class="title">
+            <h2>全部商品</h2>
+          </div><br>
+          <div class="allproduct">
             <div class="product-card">
-                <div class="product-pic">
-                    <img src="pic/land-sea.jpeg" alt="海陸饗宴" onclick="toggleCard()">
-                            <div id="card" class="card">
-                              <div class="card-content">
-                                <span class="close" onclick="toggleCard()">&times;</span>
-                                <div class="card-pic">
-                                    <img src="pic/land-sea.jpeg" alt="">
-                                </div>
-                                <div class="card-txt">
-                                    <h3>職人嚴選-海陸饗宴</h3>
-                                    <p class="content">內容物:</p>
-                                    <ul>
-                                        <li>帶骨牛小排:300g</li>
-                                        <li>A5和牛:200g</li>
-                                        <li>紐約客牛排:300g</li>
-                                        <li>精選干貝:200g</li>
-                                        <li>天使紅蝦:300g</li>
-                                        <li>無敵韓式泡菜:200g</li>
-                                    </ul>
-                                    <div class="discount">
-                                        <span>全店，滿$3000，免運費</span><br>
-                                        <span>全店，滿$3,000本島免運費</span>
-                                    </div>
-                                    <div class="card-price">
-                                        <p>NT$3,680</p>
-                                    </div>
-                                    <div class="cart-icon">
-                                        <button class="minus">-</button>
-                                        <input type="text" class="input-num" value="1">
-                                        <button class="plus">+</button>
-                                    </div>
-                                    <div class="cart-btn">
-                                        <button class="btn">加入購物車</button>
-                                    </div>
-                                </div>
-                              </div>
-                            </div>
-                      
+              <div class="product-pic">
+                <img src="pic/land-sea.jpeg" alt="海陸饗宴" onclick="toggleCard('card1')">
+                <div id="card1" class="card" style="display: none;">
+                  <div class="card-content">
+                    <span class="close" onclick="toggleCard('card1')">&times;</span>
+                    <div class="card-pic">
+                      <img src="pic/land-sea.jpeg" alt="">
+                    </div>
+                    <div class="card-txt">
+                      <h3>職人嚴選-海陸饗宴</h3>
+                      <p class="content">內容物:</p>
+                      <ul>
+                        <li>帶骨牛小排:300g</li>
+                        <li>A5和牛:200g</li>
+                        <li>紐約客牛排:300g</li>
+                        <li>精選干貝:200g</li>
+                        <li>天使紅蝦:300g</li>
+                        <li>無敵韓式泡菜:200g</li>
+                      </ul>
+                      <div class="discount">
+                        <span>全店，滿$3000，免運費</span><br>
+                        <span>全店，滿$3,000本島免運費</span>
+                      </div>
+                      <div class="card-price">
+                        <p>NT$3,680</p>
+                      </div>
+                      <div class="cart-icon">
+                        <button class="minus">-</button>
+                        <input type="text" class="input-num" value="1">
+                        <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                        <button class="btn">加入購物車</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="producttext">
-                    <a href="#" >職人嚴選-海陸饗宴</a >
-                    <p>精選組合<br><span>NT$3,680</span></p>
+              </div>
+              <div class="producttext">
+                <a href="#">職人嚴選-海陸饗宴</a>
+                <p>精選組合<br><span>NT$3,680</span></p>
+              </div>
+            </div>
+      
+            <div class="product-card">
+              <div class="product-pic">
+                <img src="pic/luxury.jpeg" alt="海陸饗宴" onclick="toggleCard('card2')">
+                <div id="card2" class="card" style="display: none;">
+                  <div class="card-content">
+                    <span class="close" onclick="toggleCard('card2')">&times;</span>
+                    <div class="card-pic">
+                      <img src="pic/luxury.jpeg" alt="">
+                    </div>
+                    <div class="card-txt">
+                      <h3>職人嚴選-豪華饗宴</h3>
+                      <p class="content">內容物:</p>
+                      <ul>
+                        <li>帶骨牛小排:300g</li>
+                        <li>A5和牛:200g</li>
+                        <li>紐約客牛排:300g</li>
+                        <li>CHOICE沙朗:200g</li>
+                        <li>特選牛小排:300g</li>
+                        <li>無敵韓式泡菜:200g</li>
+                      </ul>
+                      <div class="discount">
+                        <span>全店，滿$3000，免運費</span><br>
+                        <span>全店，滿$3,000本島免運費</span>
+                      </div>
+                      <div class="card-price">
+                        <p>NT$3,380</p>
+                      </div>
+                      <div class="cart-icon">
+                        <button class="minus">-</button>
+                        <input type="text" class="input-num" value="1">
+                        <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                        <button class="btn">加入購物車</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+              </div>
+              <div class="producttext">
+                <a href="#">職人嚴選-豪華饗宴</a>
+                <p>精選組合<br><span>NT$3,380</span></p>
+              </div>
             </div>
+      
+            <div class="product-card">
+              <div class="product-pic">
+                <img src="pic/land-sea.jpeg" alt="海陸饗宴" onclick="toggleCard('card3')">
+                <div id="card3" class="card" style="display: none;">
+                  <div class="card-content">
+                    <span class="close" onclick="toggleCard('card3')">&times;</span>
+                    <div class="card-pic">
+                      <img src="pic/land-sea.jpeg" alt="">
+                    </div>
+                    <div class="card-txt">
+                      <h3>職人嚴選-海陸饗宴</h3>
+                      <p class="content">內容物:</p>
+                      <ul>
+                        <li>帶骨牛小排:300g</li>
+                        <li>A5和牛:200g</li>
+                        <li>紐約客牛排:300g</li>
+                        <li>精選干貝:200g</li>
+                        <li>天使紅蝦:300g</li>
+                        <li>無敵韓式泡菜:200g</li>
+                      </ul>
+                      <div class="discount">
+                        <span>全店，滿$3000，免運費</span><br>
+                        <span>全店，滿$3,000本島免運費</span>
+                      </div>
+                      <div class="card-price">
+                        <p>NT$3,680</p>
+                      </div>
+                      <div class="cart-icon">
+                        <button class="minus">-</button>
+                        <input type="text" class="input-num" value="1">
+                        <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                        <button class="btn">加入購物車</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="producttext">
+                <a href="#">職人嚴選-海陸饗宴</a>
+                <p>精選組合<br><span>NT$3,680</span></p>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-    <script>
-    function toggleCard() {
-  var card = document.getElementById("card");
-  if (card.style.display === "none") {
-    card.style.display = "block";
-  } else {
-    card.style.display = "none";
-  }
-}
-
-      </script>
+        <script>
+          function toggleCard(cardId) {
+            var card = document.getElementById(cardId);
+            var computedStyle = window.getComputedStyle(card);
+            if (computedStyle.display === "none") {
+              card.style.display = "block";
+            } else {
+              card.style.display = "none";
+            }
+          }
+        </script>
+      
+      
 </body>
 </html>

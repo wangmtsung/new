@@ -1,9 +1,9 @@
-/* 結帳流程 */
-.list{
+ /* -------------結帳流程------------- */
+ .list{
     display: flex;
     justify-content: center;
     margin: auto;
-    width:1200px;
+    max-width:1200px;
     list-style: none;
     padding-top: 60px;
     }
@@ -13,7 +13,6 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    /* background-color:#9B866A; */
     border: 1px solid #784A43 ;
    justify-content: center;
     text-align: center;
@@ -41,7 +40,7 @@
     left: -200px;
 }
 .box{
-    width: 1080px;
+    max-width: 1080px;
     display: flex;
     justify-content: center;
     margin: auto;
@@ -61,9 +60,9 @@
 .text span+span{
     margin-left: 200px;
 }
-/* 結帳資訊 */
+/* -------------結帳資訊------------- */
 .cart-info{
-    width: 1080px;
+    max-width: 1080px;
     display: flex;
     margin: auto;
     flex-direction: column;
@@ -72,10 +71,9 @@
     color: #784A43;
 }
 .cart-info-nav{
-    width: 1080px;
+    max-width: 1080px;
     display: flex;
     justify-content:space-around;
-    /* margin: auto; */
     border-bottom: 2px solid #784A43;
    padding: 5px;
    box-sizing: border-box;
@@ -88,22 +86,27 @@
     margin-top: 20px;
     
 }
-.product-name{
-    width: 200px;
-    flex-grow: 1;
+.product-pic{
+    cursor: pointer;
+}
+.product-name {
     padding-left: 5px;
+    cursor: pointer;
+}
+.product-name p{
     font-size: 16px;
+}
+.product-name span{
+    color: #A61F1F;
+    font-size: 12px;
+    font-weight: bolder;
 }
 .product-price{
     flex-grow: 1.35;
     font-weight: bolder;
 }
-.product-quantity{
-    flex-grow: 1.35;
 
-}
 .product-cost{
-    flex-grow: 0.6;
     font-weight: bolder;
 }
 .input-num{
@@ -115,13 +118,16 @@
     width: 20px;
     border: none;
     background-color: white;
+    cursor: pointer;
+}
+.delete{
+    cursor: pointer;
 }
 
-/* 宅配選單 */
+/* -------------宅配選單------------- */
 .checkout-container{
     margin-top: 40px;
-    width: 1080px;
-    display: flex;
+    max-width: 1080px;
     margin: auto;
     justify-content: space-between;
     padding-top: 60px;
@@ -150,15 +156,11 @@
     justify-content: space-between;
 }
 .order-information .total{
-    /* padding-top: 20px; */
     border-top: 2px solid #784A43;
     color: #784A43;
 }
 .order-information span{
     font-weight: bolder;
-}
-.order-information .freight{
-    padding-bottom: 80px;
 }
 .order-information .pay{
     text-align: center;
@@ -174,9 +176,9 @@
     border-radius: 5px;
     font-size: 18px;
 }
-/* 訂購須知 */
+/* -------------訂購須知------------- */
 .notice{
-    width: 1080px;
+    max-width: 1080px;
     padding: 20px;
     margin: auto;
 }
@@ -194,3 +196,133 @@
     font-size: 12px;
     color: #784A43;
 }
+
+/* ------------手機版------------- */
+@media screen and (max-width:768px){
+     /* -------------結帳資訊------------- */
+    .cart-info h2{
+        display: none;
+    }
+    /* -------------商品資訊------------- */
+    .product-list{
+        padding: 10px;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-around;
+    }
+    .list li + li{
+    margin-left: 100px;
+    }
+    .list li + li::before{
+        width: 100px;
+        left: -100px;
+    }
+    .list li{
+        width: 40px;
+        height: 40px;
+    }
+    .box span{
+        width: 50px;
+        font-size: 12px;
+    }
+    .text span+span{
+        margin-left: 100px;
+    }
+    .cart-info-nav{
+        display: none;
+    }
+    .product-name{
+        width: 120px;
+    }
+    .product-name span{
+        font-size: 12px;
+    }
+    .product-name p{
+        font-size: 14px;
+    }
+    .input-num{
+        width: 30px;
+    }
+    .product-quantity button{
+        width: 15px;
+    }
+    .cart-box{
+        display: flex;
+        flex-direction: column;
+    
+    }
+    .product-price{
+        display: none;
+    }
+    .product-cost{
+        font-size: 14px;
+    }
+    .delete{
+        font-size: 12px;
+    }
+    /* -------------宅配選單------------- */
+    .checkout-delivery, .order-information{
+        width: 350px;
+        margin: auto;
+    }
+    .checkout-delivery h3, .order-information h3{
+        font-size: 16px;
+    }
+    .checkout-delivery, .order-information p{
+        font-size: 14px;
+    }
+    .order-information .pay a{
+        color: white;
+        font-weight: bolder;
+        text-decoration: none;
+        background-color: #784A43;
+        font-size: 16px;
+        padding: 5px 20px;
+    }
+    .order-information{
+        margin-top: 20px;
+    }
+    .order-information .freight{
+        padding-bottom: 30px;
+    }
+    .notice h3{
+        font-size: 12px;
+        color: #784A43;
+        border-bottom: 1px solid #784A43;
+    }
+    .notice li{
+        padding-top: 10px;
+        font-size: 10px;
+        text-indent: 8px;
+    }
+    .notice span{
+        font-size: 10px;
+        color: #784A43;
+    }
+    
+  }
+  
+/* --------------桌機版 -------------------*/
+  @media screen and (min-width:769px){
+    .product-name{
+        width: 200px;
+        flex-grow: 1;
+    }
+    .product-cost{
+        flex-grow: 0.6;
+    }
+    .product-quantity{
+    flex-grow: 1.35;
+
+    }
+    /* -------------宅配選單------------- */
+    .checkout-container{
+        display: flex;
+    }
+    .checkout-delivery, .order-information{
+        width: 400px;
+    }
+    .order-information .freight{
+        padding-bottom: 80px;
+    }
+  }

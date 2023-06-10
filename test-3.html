@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/delivery.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="pic/header-logo.png" alt="標題logo">
+            </a>
+        </div>
+        <div class="header-container">
+            <nav class="nav">
+                <div class="nav-list-box">
+                    <a class="nav-menu" href="menu.html">炙・菜單<br></a>
+                    <a class="nav-menu" href="about.html">關於炙造所<br></a>
+                    <a class="nav-menu" href="delivery.html">宅配到府<br></a>
+                    <a class="nav-menu" href="news.html">最新情報<br></a>
+                </div>
+                <div class="icon-container">
+                    <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="login.html"><i class="fa-solid fa-user"></i></a>
+                    <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                </div>
+            </nav>
+            <h1>宅配到府</h1>
+        </div>
+    </div>
+
+    <!-- 全部商品 -->
+    <div class="product-box">
+      <div class="title"><h2>全部商品</h2></div><br>
+      <div class="allproduct">
+          <div class="product-card">
+              <div class="product-pic">
+                <img src="pic/land-sea.jpeg" alt="海陸饗宴" onclick="toggleCard('card1')">
+                <div id="card1" class="card" style="display: none;">
+                  <div class="card-content">
+                    <span class="close" onclick="toggleCard('card1')">&times;</span>
+                    <div class="card-pic">
+                      <img src="pic/land-sea.jpeg" alt="">
+                    </div>
+                    <div class="card-txt">
+                      <h3>職人嚴選-海陸饗宴</h3>
+                      <p class="content">內容物:</p>
+                      <ul>
+                        <li>帶骨牛小排:300g</li>
+                        <li>A5和牛:200g</li>
+                        <li>紐約客牛排:300g</li>
+                        <li>精選干貝:200g</li>
+                        <li>天使紅蝦:300g</li>
+                        <li>無敵韓式泡菜:200g</li>
+                      </ul>
+                      <div class="discount">
+                        <span>全店，滿$3000，免運費</span><br>
+                        <span>全店，滿$3,000本島免運費</span>
+                      </div>
+                      <div class="card-price">
+                        <p>NT$3,680</p>
+                      </div>
+                      <div class="card-cart-icon">
+                        <button class="minus">-</button>
+                        <input type="text" class="input-num" value="1">
+                        <button class="plus">+</button>
+                      </div>
+                      <div class="card-cart-btn">
+                        <button class="btn">加入購物車</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="producttext">
+                <a href="#">職人嚴選-海陸饗宴</a>
+                <p>精選組合<br><span>NT$3,680</span></p>
+              </div>
+            </div>
+      
+            <div class="product-card">
+              <div class="product-pic">
+                <img src="pic/luxury.jpeg" alt="海陸饗宴" onclick="toggleCard('card2')">
+                <div id="card2" class="card" style="display: none;">
+                  <div class="card-content">
+                    <span class="close" onclick="toggleCard('card2')">&times;</span>
+                    <div class="card-pic">
+                      <img src="pic/luxury.jpeg" alt="">
+                    </div>
+                    <div class="card-txt">
+                      <h3>職人嚴選-豪華饗宴</h3>
+                      <p class="content">內容物:</p>
+                      <ul>
+                        <li>帶骨牛小排:300g</li>
+                        <li>A5和牛:200g</li>
+                        <li>紐約客牛排:300g</li>
+                        <li>CHOICE沙朗:200g</li>
+                        <li>特選牛小排:300g</li>
+                        <li>無敵韓式泡菜:200g</li>
+                      </ul>
+                      <div class="discount">
+                        <span>全店，滿$3000，免運費</span><br>
+                        <span>全店，滿$3,000本島免運費</span>
+                      </div>
+                      <div class="card-price">
+                        <p>NT$3,380</p>
+                      </div>
+                      <div class="card-cart-icon">
+                        <button class="minus">-</button>
+                        <input type="text" class="input-num" value="1">
+                        <button class="plus">+</button>
+                      </div>
+                      <div class="card-cart-btn">
+                        <button class="btn">加入購物車</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="producttext">
+                <a href="#">職人嚴選-豪華饗宴</a>
+                <p>精選組合<br><span>NT$3,380</span></p>
+              </div>
+            </div>
+      
+            <div class="product-card">
+              <div class="product-pic">
+                <img src="pic/land-sea.jpeg" alt="海陸饗宴" onclick="toggleCard('card3')">
+                <div id="card3" class="card" style="display: none;">
+                  <div class="card-content">
+                    <span class="close" onclick="toggleCard('card3')">&times;</span>
+                    <div class="card-pic">
+                      <img src="pic/land-sea.jpeg" alt="">
+                    </div>
+                    <div class="card-txt">
+                      <h3>職人嚴選-海陸饗宴</h3>
+                      <p class="content">內容物:</p>
+                      <ul>
+                        <li>帶骨牛小排:300g</li>
+                        <li>A5和牛:200g</li>
+                        <li>紐約客牛排:300g</li>
+                        <li>精選干貝:200g</li>
+                        <li>天使紅蝦:300g</li>
+                        <li>無敵韓式泡菜:200g</li>
+                      </ul>
+                      <div class="discount">
+                        <span>全店，滿$3000，免運費</span><br>
+                        <span>全店，滿$3,000本島免運費</span>
+                      </div>
+                      <div class="card-price">
+                        <p>NT$3,680</p>
+                      </div>
+                      <div class="card-cart-icon">
+                        <button class="minus">-</button>
+                        <input type="text" class="input-num" value="1">
+                        <button class="plus">+</button>
+                      </div>
+                      <div class="card-cart-btn">
+                        <button class="btn">加入購物車</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="producttext">
+                <a href="#">職人嚴選-海陸饗宴</a>
+                <p>精選組合<br><span>NT$3,680</span></p>
+              </div>
+            </div>
+          <div class="product-card">
+              <div class="product-pic">
+                  <img src="pic/bone-in.png" alt="帶骨牛小排">
+                  <div class="cart">
+                      <div class="cart-icon">
+                          <button class="minus">-</button>
+                          <input type="text" class="input-num" value="1">
+                          <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                          <button class="btn">加入購物車</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="producttext">
+                  <a href="#">美國安格斯CHOICE特選級牛小排</a>
+                  <p>單點美味<br><span>NT$310</span></p>
+              </div>
+              
+          </div>
+          <div class="product-card">
+              <div class="product-pic">
+                  <img src="pic/sharon.png" alt="莎朗">
+                  <div class="cart">
+                      <div class="cart-icon">
+                          <button class="minus">-</button>
+                          <input type="text" class="input-num" value="1">
+                          <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                          <button class="btn">加入購物車</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="producttext">
+                  <a href="#">美國安格斯CHOICE沙朗</a>
+                  <p>單點美味<br><span>NT$670</span></p>
+              </div>
+              
+          </div>
+          <div class="product-card">
+              <div class="product-pic">
+                  <img src="pic/bone-in.png" alt="紐約客">
+                  <div class="cart">
+                      <div class="cart-icon">
+                          <button class="minus">-</button>
+                          <input type="text" class="input-num" value="1">
+                          <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                          <button class="btn">加入購物車</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="producttext">
+                  <a href="#">美國安格斯CHOICE特選級牛小排</a>
+                  <p>單點美味<br><span>NT$310</span></p>
+              </div>
+             
+          </div>
+          <div class="product-card">
+              <div class="product-pic">
+                  <img src="pic/a5.png" alt="肋眼">
+                  <div class="cart">
+                      <div class="cart-icon">
+                          <button class="minus">-</button>
+                          <input type="text" class="input-num" value="1">
+                          <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                          <button class="btn">加入購物車</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="producttext">
+                  <a href="#">日本頂級A5和牛肋眼</a>
+                  <p>單點美味<br><span>NT$1,840</span></p>
+              </div>
+             
+          </div>
+          <div class="product-card">
+              <div class="product-pic">
+                  <img src="pic/bone-in.png" alt="p帶骨牛小排">
+                  <div class="cart">
+                      <div class="cart-icon">
+                          <button class="minus">-</button>
+                          <input type="text" class="input-num" value="1">
+                          <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                          <button class="btn">加入購物車</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="producttext">
+                  <a href="#">美國安格斯CHOICE特選級牛小排</a>
+                  <p>單點美味<br><span>NT$310</span></p>
+              </div>
+             
+          </div>
+          <div class="product-card">
+              <div class="product-pic">
+                  <img src="pic/prime.png" alt="頂級牛小排">
+                  <div class="cart">
+                      <div class="cart-icon">
+                          <button class="minus">-</button>
+                          <input type="text" class="input-num" value="1">
+                          <button class="plus">+</button>
+                      </div>
+                      <div class="cart-btn">
+                          <button class="btn">加入購物車</button>
+                      </div>
+                  </div>
+              </div>
+              <div class="producttext">
+                  <a href="#">美國安格斯PRIME頂級牛小排</a>
+                  <p>單點美味<br><span>NT$760</span></p>
+              </div>
+              
+          </div>
+      </div>
+  </div>
+   <!-- 頁尾 -->
+   <div class="main-footer">
+    <div class="footer">
+        <div class="footer-logo">
+            <a href="index.html"><img src="pic/index-logo2.png" alt="小logo"></a>
+        </div>
+        <div class="footer-icon">
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+    </div>
+    <div class="footer-block">
+        <div class="footer-item">
+            <div class="footer-list">
+                 <a href="#">會員專區</a>
+                <a href="#">常見問題</a>
+                <a href="#">菁英招募</a>
+                <a href="#">集團品牌</a>
+                <a href="#">聯絡我們</a>
+            </div>
+        </div>
+            <div class="footer-text">
+                <p>商品擺盤請以現場實物為準，產品形象圖中之擺盤裝飾物係為示意圖。</p>
+            </div>
+    </div> 
+</div>
+<button onclick="topFunction()" id="myBtn" title="Gotop"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0iQ2FwYV8xIgogICB4PSIwcHgiCiAgIHk9IjBweCIKICAgd2lkdGg9IjUxMnB4IgogICBoZWlnaHQ9IjUxMnB4IgogICB2aWV3Qm94PSIwIDAgNDUxLjg0NiA0NTEuODQ3IgogICBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTEuODQ2IDQ1MS44NDc7IgogICB4bWw6c3BhY2U9InByZXNlcnZlIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ4LjUgcjEwMDQwIgogICBzb2RpcG9kaTpkb2NuYW1lPSJhcnJvdy1wb2ludC10by1yaWdodC5zdmciPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE0MSI+PHJkZjpSREY+PGNjOldvcmsKICAgICAgIHJkZjphYm91dD0iIj48ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD48ZGM6dHlwZQogICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICBpZD0iZGVmczM5IiAvPjxzb2RpcG9kaTpuYW1lZHZpZXcKICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgb2JqZWN0dG9sZXJhbmNlPSIxMCIKICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgIGd1aWRldG9sZXJhbmNlPSIxMCIKICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTYwMCIKICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iODM3IgogICBpZD0ibmFtZWR2aWV3MzciCiAgIHNob3dncmlkPSJmYWxzZSIKICAgaW5rc2NhcGU6em9vbT0iMC40NjA5Mzc1IgogICBpbmtzY2FwZTpjeD0iMjU2IgogICBpbmtzY2FwZTpjeT0iMjU2IgogICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgIGlua3NjYXBlOndpbmRvdy15PSItOCIKICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0iQ2FwYV8xIiAvPgo8ZwogICBpZD0iZzMiCiAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiCiAgIHRyYW5zZm9ybT0ibWF0cml4KDAsLTEsLTEsMCw0NTEuODQ2NSw0NTEuODQ2NSkiPgoJPHBhdGgKICAgZD0iTSAzNDUuNDQxLDI0OC4yOTIgMTUxLjE1NCw0NDIuNTczIGMgLTEyLjM1OSwxMi4zNjUgLTMyLjM5NywxMi4zNjUgLTQ0Ljc1LDAgLTEyLjM1NCwtMTIuMzU0IC0xMi4zNTQsLTMyLjM5MSAwLC00NC43NDQgTCAyNzguMzE4LDIyNS45MiAxMDYuNDA5LDU0LjAxNyBjIC0xMi4zNTQsLTEyLjM1OSAtMTIuMzU0LC0zMi4zOTQgMCwtNDQuNzQ4IDEyLjM1NCwtMTIuMzU5IDMyLjM5MSwtMTIuMzU5IDQ0Ljc1LDAgbCAxOTQuMjg3LDE5NC4yODQgYyA2LjE3Nyw2LjE4IDkuMjYyLDE0LjI3MSA5LjI2MiwyMi4zNjYgMCw4LjA5OSAtMy4wOTEsMTYuMTk2IC05LjI2NywyMi4zNzMgeiIKICAgaWQ9InBhdGg1IgogICBzdHlsZT0iZmlsbDojZmZmZmZmIgogICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgo8L2c+CjxnCiAgIGlkPSJnNyI+CjwvZz4KPGcKICAgaWQ9Imc5Ij4KPC9nPgo8ZwogICBpZD0iZzExIj4KPC9nPgo8ZwogICBpZD0iZzEzIj4KPC9nPgo8ZwogICBpZD0iZzE1Ij4KPC9nPgo8ZwogICBpZD0iZzE3Ij4KPC9nPgo8ZwogICBpZD0iZzE5Ij4KPC9nPgo8ZwogICBpZD0iZzIxIj4KPC9nPgo8ZwogICBpZD0iZzIzIj4KPC9nPgo8ZwogICBpZD0iZzI1Ij4KPC9nPgo8ZwogICBpZD0iZzI3Ij4KPC9nPgo8ZwogICBpZD0iZzI5Ij4KPC9nPgo8ZwogICBpZD0iZzMxIj4KPC9nPgo8ZwogICBpZD0iZzMzIj4KPC9nPgo8ZwogICBpZD0iZzM1Ij4KPC9nPgo8L3N2Zz4=" width="24px" height="24px"></button>
+    
+<script>
+     <!-- top按鈕 -->
+    
+    window.onscroll = scrollFunction;
+
+    function scrollFunction() { 
+    if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+    }
+
+    function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+    }
+// 彈出式卡片
+function toggleCard(cardId) {
+        var card = document.getElementById(cardId);
+        var computedStyle = window.getComputedStyle(card);
+        if (computedStyle.display === "none") {
+            card.style.display = "block";
+        } else {
+            card.style.display = "none";
+        }
+    }
+</script> 
+<!-- 購物車按鈕設定 -->
+<script>
+const productCards = document.querySelectorAll('.product-card');
+
+productCards.forEach((card) => {
+  const minusButton = card.querySelector('.minus');
+  const plusButton = card.querySelector('.plus');
+  const inputNum = card.querySelector('.input-num');
+  const addToCartButton = card.querySelector('.btn');
+
+  
+  minusButton.addEventListener('click', () => {
+    
+    let num = parseInt(inputNum.value);
+    if (num > 1) {
+      num--;
+      inputNum.value = num;
+    }
+  });
+
+ 
+  plusButton.addEventListener('click', () => {
+    
+    let num = parseInt(inputNum.value);
+    if (num < 10) {
+      num++;
+      inputNum.value = num;
+    }
+  });
+
+addToCartButton.addEventListener('click', () => {
+ 
+  const productName = card.querySelector('a').textContent;
+  const quantity = parseInt(inputNum.value);
+
+  alert(`已經將 ${productName} 加入購物車`);
+
+  inputNum.value = 1;
+});
+  
+});
+
+
+
+</script>
+</body>
+</html>

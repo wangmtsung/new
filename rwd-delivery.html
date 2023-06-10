@@ -9,9 +9,324 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/delivery.css">
     <link rel="stylesheet" href="css/footer.css">
     <title>炙造所delivery</title>
+    <style>
+        /* 全部商品 */
+.product-box{
+    margin-top: 40px;
+}
+.allproduct{
+    max-width: 1080px;
+    margin: auto;
+    display: flex;
+    /* background-color: #ccc; */
+    /* padding: 20px; */
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.product-box .title{
+    max-width: 1080px;
+} 
+
+h2{
+    color:#784A43;
+    text-align: center;
+    display: inline-block;
+    font-size: 18px;
+}
+.product-card{
+    width: 300px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
+    
+}
+.product-pic{
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    margin: auto;
+    cursor: pointer;
+}
+.product-card .cart{
+    position: absolute;
+    inset: 10px;
+    padding: 20px;
+    background-color: #0005;
+    color: #fff;
+    transform: scale(0.5);
+    opacity: 0;
+    transition: .5s;
+    line-height: 30px;
+    /* align-items: center; */
+    box-shadow: 3px 3px 3px 3px #0005;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover .cart{
+    transform: scale(1);
+    opacity: 1;
+    background-color: #000c;
+}
+.product-card .input-num{
+    width: 50px;
+    text-align: center;
+    border: none;
+    background-color: white;
+}
+.product-card .minus ,.product-card .plus{
+    width: 20px;
+    border: none;
+    background-color:white;
+    cursor: pointer;
+}
+
+.cart-btn .btn{
+    padding: 5px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    
+}
+.product-card img{
+    width: 100%;
+    box-shadow:5px 5px 5px 0 #0005;
+}
+
+.producttext a{
+    color: black;
+    font-size: 16px;
+    text-decoration: none;
+}
+.producttext p{
+    color:#A61F1F;
+    font-size: 12px;
+}
+.producttext span{
+    font-size: 14px;
+    font-weight: bolder;
+    color: black;
+}
+.card {
+    display: none;
+    position: fixed;
+    z-index: 3;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  .card-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    justify-content: space-between;
+    position: relative;
+  }
+  
+  
+  .card-txt h3{
+      color: #A61F1F;
+      font-size: 20px;
+      margin: 10px;
+  }
+  .card-txt .content{
+      font-weight: bolder;
+      width: 80px;
+      font-size: 16px;
+      margin-bottom: -10px;
+  }
+  .card-txt li{
+      font-size: 14px;
+      color: #784A43;
+      text-align: left;
+      margin-right: 20px;
+      
+  }
+  .card-txt ul{
+      margin: 10px;
+      border-bottom: 1px solid #784A43;
+      padding: 10px;
+  }
+  .card-txt .discount{
+      background-color: #f3f1f1;
+      text-align: left;
+      padding:10px 10px;
+      font-size: 14px;
+      border-left: 2px solid #A61F1F;
+
+  }
+  .card-price p{
+      color: #A61F1F;
+      font-size: 20px;
+      font-weight: bolder;
+      text-align: left;
+      margin-top: 5px;
+  }
+  .card-cart-icon .input-num{
+      width: 100px;
+      text-align: center;
+      border: none;
+      background-color: white;
+  }
+  .card-cart-icon .minus ,.card-cart-icon .plus{
+      width: 20px;
+      border: none;
+      background-color:white;
+      cursor: pointer;
+  }
+  .card-cart-btn{
+      padding-top: 10px;
+      
+  }
+  .card-cart-btn .btn{
+      cursor: pointer;
+      padding: 3px;
+      text-align: center;
+      background-color: white;
+      
+  }
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  @media screen and (max-width:768px){
+    h2{
+      font-size: 16px;
+      margin-left: 30px;
+    }
+    .allproduct{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .product-card{
+        width: 150px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        
+    }
+    .product-pic{
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        margin: auto;
+        cursor: pointer;
+    }
+    .product-card .input-num{
+      width: 30px;
+    }
+    .producttext a{
+      font-size: 12px;
+    }
+    .producttext p{
+      font-size: 10px;
+    }
+    .producttext span{
+      font-size: 12px;
+    }
+    /* 蓋板 */
+    .card{
+      padding-top: 20%;
+      height: 100%;
+    }
+    .card-content{
+      width: 60%;
+      margin: auto;
+    }
+    .card-pic{
+      width: 100%;
+    }
+    .card h3{
+      font-size: 12px;
+    }
+    .card-txt .content{
+      font-size: 12px;
+      width: 100%;
+    }
+    .card-txt li{
+      font-size: 10px;
+    }
+    .discount{
+      display: none;
+    }
+    .card-price p{
+      font-size: 14px;
+    }
+    .close{
+      font-size: 20px;
+    }
+    /* hover-button */
+    .product-card .minus ,.product-card .plus{
+      width: 15px;
+    }
+  }
+/* 桌機版 */
+  @media screen and (min-width:769px){
+    .product-box .title{
+      display: flex;
+      margin: auto;
+      align-items: center;
+      padding-left:100px;
+    }
+    .card{
+      height: 100%;
+    }
+    .card-content{
+      display: flex;
+    }
+    .product-card img{
+      height: 230px;
+    }
+    .card-pic{
+      width: 250px;
+      display: flex;
+      align-items: center;
+  }
+    .card-txt{
+      width: 300px;
+    }
+    .card-txt li{
+      line-height: 25px;
+    }
+    .close{
+      margin-right: 10px;
+    }
+    /* hover-button */
+    .cart-icon{
+      padding-top: 40px;
+    }
+    .cart-btn{
+      padding-top: 30px;
+    }
+  }
+    </style>
 </head>
 <body>
   <input type="checkbox" name="" id="menu_switch">
@@ -44,7 +359,7 @@
         </div>
     </div>
 
-    <!-------------全部商品------------->
+    <!-- 全部商品 -->
     <div class="product-box">
         <div class="title"><h2>全部商品</h2></div><br>
         <div class="allproduct">
@@ -197,7 +512,7 @@
                     </div>
                 </div>
                 <div class="producttext">
-                    <a href="#">美國安格斯特選級牛排</a>
+                    <a href="#">美國安格斯CHOICE特選級牛小排</a>
                     <p>單點美味<br><span>NT$310</span></p>
                 </div>
                 
@@ -237,7 +552,7 @@
                     </div>
                 </div>
                 <div class="producttext">
-                    <a href="#">美國安格斯特選級牛排</a>
+                    <a href="#">美國安格斯CHOICE特選級牛小排</a>
                     <p>單點美味<br><span>NT$310</span></p>
                 </div>
                
@@ -277,7 +592,7 @@
                     </div>
                 </div>
                 <div class="producttext">
-                    <a href="#">美國安格斯特選級牛排</a>
+                    <a href="#">美國安格斯CHOICE特選級牛小排</a>
                     <p>單點美味<br><span>NT$310</span></p>
                 </div>
                
@@ -304,7 +619,7 @@
             </div>
         </div>
     </div>
-   <!-------------頁尾------------->
+   <!-- 頁尾 -->
    <div class="main-footer">
     <div class="footer">
         <div class="footer-logo">
@@ -330,11 +645,92 @@
             </div>
     </div> 
 </div>
-<!-------------top------------->
+<!-- top -->
 <button onclick="topFunction()" id="myBtn" title="Gotop"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4KCjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c29kaXBvZGk9Imh0dHA6Ly9zb2RpcG9kaS5zb3VyY2Vmb3JnZS5uZXQvRFREL3NvZGlwb2RpLTAuZHRkIgogICB4bWxuczppbmtzY2FwZT0iaHR0cDovL3d3dy5pbmtzY2FwZS5vcmcvbmFtZXNwYWNlcy9pbmtzY2FwZSIKICAgdmVyc2lvbj0iMS4xIgogICBpZD0iQ2FwYV8xIgogICB4PSIwcHgiCiAgIHk9IjBweCIKICAgd2lkdGg9IjUxMnB4IgogICBoZWlnaHQ9IjUxMnB4IgogICB2aWV3Qm94PSIwIDAgNDUxLjg0NiA0NTEuODQ3IgogICBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCA0NTEuODQ2IDQ1MS44NDc7IgogICB4bWw6c3BhY2U9InByZXNlcnZlIgogICBpbmtzY2FwZTp2ZXJzaW9uPSIwLjQ4LjUgcjEwMDQwIgogICBzb2RpcG9kaTpkb2NuYW1lPSJhcnJvdy1wb2ludC10by1yaWdodC5zdmciPjxtZXRhZGF0YQogICBpZD0ibWV0YWRhdGE0MSI+PHJkZjpSREY+PGNjOldvcmsKICAgICAgIHJkZjphYm91dD0iIj48ZGM6Zm9ybWF0PmltYWdlL3N2Zyt4bWw8L2RjOmZvcm1hdD48ZGM6dHlwZQogICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPjwvY2M6V29yaz48L3JkZjpSREY+PC9tZXRhZGF0YT48ZGVmcwogICBpZD0iZGVmczM5IiAvPjxzb2RpcG9kaTpuYW1lZHZpZXcKICAgcGFnZWNvbG9yPSIjZmZmZmZmIgogICBib3JkZXJjb2xvcj0iIzY2NjY2NiIKICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgb2JqZWN0dG9sZXJhbmNlPSIxMCIKICAgZ3JpZHRvbGVyYW5jZT0iMTAiCiAgIGd1aWRldG9sZXJhbmNlPSIxMCIKICAgaW5rc2NhcGU6cGFnZW9wYWNpdHk9IjAiCiAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgIGlua3NjYXBlOndpbmRvdy13aWR0aD0iMTYwMCIKICAgaW5rc2NhcGU6d2luZG93LWhlaWdodD0iODM3IgogICBpZD0ibmFtZWR2aWV3MzciCiAgIHNob3dncmlkPSJmYWxzZSIKICAgaW5rc2NhcGU6em9vbT0iMC40NjA5Mzc1IgogICBpbmtzY2FwZTpjeD0iMjU2IgogICBpbmtzY2FwZTpjeT0iMjU2IgogICBpbmtzY2FwZTp3aW5kb3cteD0iLTgiCiAgIGlua3NjYXBlOndpbmRvdy15PSItOCIKICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgaW5rc2NhcGU6Y3VycmVudC1sYXllcj0iQ2FwYV8xIiAvPgo8ZwogICBpZD0iZzMiCiAgIHN0eWxlPSJmaWxsOiNmZmZmZmYiCiAgIHRyYW5zZm9ybT0ibWF0cml4KDAsLTEsLTEsMCw0NTEuODQ2NSw0NTEuODQ2NSkiPgoJPHBhdGgKICAgZD0iTSAzNDUuNDQxLDI0OC4yOTIgMTUxLjE1NCw0NDIuNTczIGMgLTEyLjM1OSwxMi4zNjUgLTMyLjM5NywxMi4zNjUgLTQ0Ljc1LDAgLTEyLjM1NCwtMTIuMzU0IC0xMi4zNTQsLTMyLjM5MSAwLC00NC43NDQgTCAyNzguMzE4LDIyNS45MiAxMDYuNDA5LDU0LjAxNyBjIC0xMi4zNTQsLTEyLjM1OSAtMTIuMzU0LC0zMi4zOTQgMCwtNDQuNzQ4IDEyLjM1NCwtMTIuMzU5IDMyLjM5MSwtMTIuMzU5IDQ0Ljc1LDAgbCAxOTQuMjg3LDE5NC4yODQgYyA2LjE3Nyw2LjE4IDkuMjYyLDE0LjI3MSA5LjI2MiwyMi4zNjYgMCw4LjA5OSAtMy4wOTEsMTYuMTk2IC05LjI2NywyMi4zNzMgeiIKICAgaWQ9InBhdGg1IgogICBzdHlsZT0iZmlsbDojZmZmZmZmIgogICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIiAvPgo8L2c+CjxnCiAgIGlkPSJnNyI+CjwvZz4KPGcKICAgaWQ9Imc5Ij4KPC9nPgo8ZwogICBpZD0iZzExIj4KPC9nPgo8ZwogICBpZD0iZzEzIj4KPC9nPgo8ZwogICBpZD0iZzE1Ij4KPC9nPgo8ZwogICBpZD0iZzE3Ij4KPC9nPgo8ZwogICBpZD0iZzE5Ij4KPC9nPgo8ZwogICBpZD0iZzIxIj4KPC9nPgo8ZwogICBpZD0iZzIzIj4KPC9nPgo8ZwogICBpZD0iZzI1Ij4KPC9nPgo8ZwogICBpZD0iZzI3Ij4KPC9nPgo8ZwogICBpZD0iZzI5Ij4KPC9nPgo8ZwogICBpZD0iZzMxIj4KPC9nPgo8ZwogICBpZD0iZzMzIj4KPC9nPgo8ZwogICBpZD0iZzM1Ij4KPC9nPgo8L3N2Zz4=" width="24px" height="24px"></button>
 <script src="js/top.js"></script>
 
-<script src="js/delivery.js"></script>
+<script>
+    // 彈出式卡片
+function toggleCard(cardId) {
+    var card = document.getElementById(cardId);
+    var computedStyle = window.getComputedStyle(card);
+    if (computedStyle.display === "none") {
+        card.style.display = "block";
+    } else {
+        card.style.display = "none";
+    }
+
+    // 使用媒體查詢檢測手機視窗
+    var mediaQuery = window.matchMedia('(max-width: 767px)');
+
+    // 定義蓋板移除的函式
+    function removeOcardId() {
+      var ocardId = document.getElementById('ocardId');
+      ocardId.style.display = 'none';
+    }
+
+    // 頁面載入時檢查媒體查詢並執行相應的操作
+    function checkMediaQuery(mediaQuery) {
+      if (mediaQuery.matches) {
+        // 手機視窗，移除蓋板
+        removeOcardId();
+      } else {
+        // 非手機視窗，保留蓋板
+        // 可以根據需要執行其他操作
+      }
+    }
+
+    // 執行初始的媒體查詢檢測
+    checkMediaQuery(mediaQuery);
+
+    // 監聽媒體查詢的變化
+    mediaQuery.addListener(checkMediaQuery);
+
+}
+
+//購物車按鈕設定
+const productCards = document.querySelectorAll('.product-card');
+    
+    productCards.forEach((card) => {
+      const minusButton = card.querySelector('.minus');
+      const plusButton = card.querySelector('.plus');
+      const inputNum = card.querySelector('.input-num');
+      const addToCartButton = card.querySelector('.btn');
+    
+      
+      minusButton.addEventListener('click', () => {
+        
+        let num = parseInt(inputNum.value);
+        if (num > 1) {
+          num--;
+          inputNum.value = num;
+        }
+      });
+    
+     
+      plusButton.addEventListener('click', () => {
+        
+        let num = parseInt(inputNum.value);
+        if (num < 10) {
+          num++;
+          inputNum.value = num;
+        }
+      });
+    
+    addToCartButton.addEventListener('click', () => {
+     
+      const productName = card.querySelector('a').textContent;
+      const quantity = parseInt(inputNum.value);
+    
+      alert(`已經將 ${productName} 加入購物車`);
+    
+      inputNum.value = 1;
+    });
+      
+    });
+</script>
+
+
 
 
 </body>

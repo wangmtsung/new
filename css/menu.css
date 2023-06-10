@@ -1,21 +1,37 @@
- /* 菜單 */
- .menu-container{
-            
-    width: 1080px;
+ 
+ /* -------------菜單------------- */
+ * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  .menu-container{
     display: flex;
     margin: auto;
     flex-direction: column;
     align-items: center;
-
-}
-.menu-container .card{
-    width: 400px;
-    box-shadow: 5px #000;
-    position: relative;
-    margin: 20px;
-    overflow: hidden;
-}
-.menu-container .txt{
+  }
+  
+  .menu-container .card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 400px;
+      margin: 10px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  
+  .menu-container .txt{
     position: absolute;
     inset: 10px;
     padding: 20px;
@@ -24,25 +40,49 @@
     transform: scale(0.5);
     opacity: 0;
     transition: .5s;
-    line-height: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-.card:hover .txt{
+  }
+  .card:hover .txt{
     transform: scale(1);
     opacity: 1;
     background-color: #000c;
-}
-.card img{
+  }
+  .card img{
     width: 100%;
     vertical-align: top;
-}
-.menu-container .txt h2{
+  }
+  .menu-container .txt h2{
     font-size: 16px;
     text-align: center;
-}
-.menu-container .txt p{
+  }
+  .menu-container .txt p{
     font-size: 12px;
     text-align: center;
-}
+  }
+
+  /* -------------手機版------------- */
+  @media screen and (max-width: 768px) {
+    .menu-container .card {
+      width: 300px;
+    }
+  }
+
+  /* -------------桌機版------------- */
+  @media screen and (min-width:769px) {
+    .menu-container .txt{
+      line-height: 30px;
+    }
+    .menu-container .card {
+      transform: translateX(400%);
+      transition: transform 1.5s ease;
+    }
+    .card:nth-of-type(even) {  /*even:偶數*/
+      transform: translateX(-400%);
+    }
+    
+    .card.show {
+      transform: translateX(0);
+    }
+  }
