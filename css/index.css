@@ -283,20 +283,19 @@ background-image: url(../pic/background.png);
     padding-top: 40px;
 }
 .new-container{
-    width: 300px;
+    width: 250px;
     display: flex;
     margin: auto;
 }
-
 .news-pic img{
     height: 200px;
     width: 100%;
-
 }
 .news-card{
+    width: 250px;
+    justify-content: center;
     text-align: center;
     background-color: white;
-    margin: 3px;
     box-shadow: 3px 3px 3px 0 #0005;
 }
 .news-txt{
@@ -593,6 +592,9 @@ background-image: url(../pic/background.png);
         justify-content: center;
         padding-bottom: 60px;
     }
+    .about-box{
+        display: flex;
+    }
     .about h2{
         writing-mode: vertical-lr;
         color:#784A43 ;
@@ -600,6 +602,7 @@ background-image: url(../pic/background.png);
         text-align: center;
         font-size: 28px;
     }
+    
     .about .signature{
         background-color: #A61F1F;
         color: white;
