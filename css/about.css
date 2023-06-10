@@ -110,11 +110,15 @@
 @media screen and (max-width: 768px) {
     .about-us{
         margin: auto;
+        display: flex;
+        flex-direction: column-reverse;
 
+    }
+    .about-us .pic , .about-food .pic{
+        max-width: 768px;
     }
     .about-us img , .about-food img{
         width: 100%;
-        height: 250px;
     }
     .about-us h2 ,.about-food h2{
         color:#A61F1F;
@@ -124,10 +128,17 @@
         font-size: 18px;
         font-weight: bolder;
     }
+    .about-us .text span , .about-food .text span{
+        display: none;
+    }
     .about-food{
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         margin: auto;
+    }
+    .aboutfood-box{
+        display: flex;
+        flex-direction: column-reverse;
     }
     .about-us .text, .about-food .text{
        display: flex;
@@ -173,14 +184,26 @@
 @media screen and (min-width:769px) {
     .about-us{
         display: flex;
+        justify-content: center;
+    }
+    .aboutus-box{
+        display: flex;
+        /* margin-left: 80px; */
     }
     .about-us .text, .about-food .text{
         width: 400px;
-        text-indent: 28px;
+        /* text-indent: 24px; */
         line-height: 25px;
+    }
+    .about-us .text{
+        padding: 0 10px 0 30px;
+        
     }
     .about-us img , .about-food img{
         width: 400px;
+    }
+    .about-us p , .about-food p{
+        padding: 10px;
     }
     .about-us h2 ,.about-food h2{
         color:#A61F1F;
@@ -192,6 +215,13 @@
     }
     .about-food{
         display: flex;
+        justify-content: center;
+    }
+    .aboutfood-box{
+        display: flex;
+    }
+    .about-food .text{
+        padding: 0 30px 0 10px;
     }
 
     /* -------------店舖據點------------- */
