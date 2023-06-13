@@ -1,319 +1,322 @@
-  
-  /* -------------全部商品------------- */
-  .product-box{
-    margin-top: 40px;
+/* -------------全部商品------------- */
+.product-box{
+  margin-top: 40px;
 }
 .allproduct{
-    max-width: 1080px;
-    margin: auto;
-    display: flex;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 20px;
+  max-width: 1080px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  
 }
 .product-box .title{
-    max-width: 1080px;
+  max-width: 1080px;
 } 
 
 h2{
-    color:#784A43;
-    text-align: center;
-    display: inline-block;
-    font-size: 18px;
+  color:#784A43;
+  text-align: center;
+  display: inline-block;
+  font-size: 18px;
 }
 .product-card{
-    width: 300px;
-    box-sizing: border-box;
-    padding: 10px;
-    margin: auto;
-    text-align: center;
-    
+  width: 300px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin: auto;
+  text-align: center;
+  
 }
 .product-pic{
-    width: 250px;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    margin: auto;
-    cursor: pointer;
-}
-.product-card .cart{
-    position: absolute;
-    inset: 10px;
-    background-color: #0005;
-    color: #fff;
-    transform: scale(0.5);
-    opacity: 0;
-    transition: .5s;
-    line-height: 30px;
-    box-shadow: 3px 3px 3px 3px #0005;
-    display: flex;
-    flex-direction: column;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  margin: auto;
+  cursor: pointer;
 }
 
-.product-card:hover .cart{
-    transform: scale(1);
-    opacity: 1;
-    background-color: #000c;
+.product-pic img{
+  width: 100%;
+  box-shadow:5px 5px 5px 0 #0005;
 }
-.product-card .input-num{
-    width: 50px;
+
+.producttext a{
+  color: black;
+  font-size: 16px;
+  text-decoration: none;
+}
+.producttext p{
+  color:#A61F1F;
+  font-size: 12px;
+}
+.producttext span{
+  font-size: 14px;
+  font-weight: bolder;
+  color: black;
+}
+.card {
+  display: none;
+  position: fixed;
+  z-index: 3;
+  left: 0;
+  top: 0;
+  width: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.card-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.card-txt h3{
+    color: #A61F1F;
+    font-size: 20px;
+    margin: 10px;
+}
+.card-txt .content{
+    font-weight: bolder;
+    width: 80px;
+    font-size: 16px;
+    margin-bottom: -10px;
+}
+.card-txt li{
+    font-size: 14px;
+    color: #784A43;
+    text-align: left;
+    margin-right: 20px;
+    
+}
+.card-txt ul{
+    margin: 10px;
+    border-bottom: 1px solid #784A43;
+    padding: 10px;
+}
+.card-txt .discount{
+    background-color: #f3f1f1;
+    text-align: left;
+    padding:10px 10px;
+    font-size: 14px;
+    border-left: 2px solid #A61F1F;
+
+}
+.card-price p{
+    color: #A61F1F;
+    font-size: 20px;
+    font-weight: bolder;
+    text-align: left;
+    margin-top: 5px;
+}
+.card-cart-icon .input-num{
+    width: 100px;
     text-align: center;
     border: none;
     background-color: white;
 }
-.product-card .minus ,.product-card .plus{
+.card-cart-icon .minus ,.card-cart-icon .plus{
     width: 20px;
     border: none;
     background-color:white;
     cursor: pointer;
 }
-
-.cart-btn .btn{
-    padding: 5px;
+.card-cart-btn{
+    padding-top: 10px;
+    
+}
+.card-cart-btn .btn{
+    cursor: pointer;
+    padding: 3px;
     text-align: center;
     background-color: white;
-    cursor: pointer;
     
 }
-.product-card img{
-    width: 100%;
-    box-shadow:5px 5px 5px 0 #0005;
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
 }
 
-.producttext a{
-    color: black;
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* -------------手機版------------- */
+@media screen and (max-width:768px){
+  h2{
     font-size: 16px;
-    text-decoration: none;
-}
-.producttext p{
-    color:#A61F1F;
+    margin-left: 30px;
+  }
+  .allproduct{
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+     
+  }
+  .product-card{
+      width: 100%;
+      box-sizing: border-box;
+      margin: auto;
+      text-align: center;
+      
+  }
+  .product-pic{
+      width: 100%;
+      height: 160px;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      margin: auto;
+      cursor: pointer;
+      align-items: center;
+  }
+  .product-card .input-num{
+    width: 30px;
+  }
+  .producttext a{
+    font-size: 13px;
+  }
+  .producttext p{
     font-size: 12px;
-}
-.producttext span{
-    font-size: 14px;
-    font-weight: bolder;
-    color: black;
-}
-.card {
-    display: none;
-    position: fixed;
-    z-index: 3;
-    left: 0;
-    top: 0;
+  }
+  .producttext span{
+    font-size: 13px;
+  }
+  /* -------------蓋板------------- */
+  .card{
+    padding-top: 20%;
+    height: 100%;
+  }
+  .card-content{
+    width: 60%;
+    margin: auto;
+  }
+  .card-pic{
     width: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
   }
-  
-  .card-content {
-    background-color: #fefefe;
-    margin: 15% auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 40%;
-    justify-content: space-between;
-    position: relative;
-  }
-  
-  
-  .card-txt h3{
-      color: #A61F1F;
-      font-size: 20px;
-      margin: 10px;
+  .card h3{
+    font-size: 12px;
   }
   .card-txt .content{
-      font-weight: bolder;
-      width: 80px;
-      font-size: 16px;
-      margin-bottom: -10px;
+    font-size: 12px;
+    width: 100%;
   }
   .card-txt li{
-      font-size: 14px;
-      color: #784A43;
-      text-align: left;
-      margin-right: 20px;
-      
+    font-size: 10px;
   }
-  .card-txt ul{
-      margin: 10px;
-      border-bottom: 1px solid #784A43;
-      padding: 10px;
-  }
-  .card-txt .discount{
-      background-color: #f3f1f1;
-      text-align: left;
-      padding:10px 10px;
-      font-size: 14px;
-      border-left: 2px solid #A61F1F;
-
+  .discount{
+    display: none;
   }
   .card-price p{
-      color: #A61F1F;
-      font-size: 20px;
-      font-weight: bolder;
-      text-align: left;
-      margin-top: 5px;
+    font-size: 14px;
   }
-  .card-cart-icon .input-num{
-      width: 100px;
-      text-align: center;
-      border: none;
-      background-color: white;
+  .close{
+    font-size: 20px;
   }
-  .card-cart-icon .minus ,.card-cart-icon .plus{
-      width: 20px;
-      border: none;
-      background-color:white;
-      cursor: pointer;
+  .product-card .minus ,.product-card .plus{
+    width: 15px;
   }
-  .card-cart-btn{
-      padding-top: 10px;
-      
+  .cart{
+    padding: 5px;
   }
-  .card-cart-btn .btn{
-      cursor: pointer;
-      padding: 3px;
-      text-align: center;
-      background-color: white;
-      
+  .cart-icon{
+    padding: 5px;
   }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 0;
-    right: 0;
-    
+  .cart-icon .minus, .cart-icon .plus{
+    border: none;
+    font-size: 16px;
+  }
+  .cart-icon .input-num{
+    width: 80px;
+    text-align: center;
+    border: none;
+  }
+  .cart-btn .btn{
+      font-size: 14px;
+  }
+  .cart-btn .btn{
+    width: 100px;
+    background-color:#784A43;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+  
+}
+/* -------------桌機版------------- */
+@media screen and (min-width:769px){
+  .allproduct{
+    gap: 20px;
+  }
+  .product-box .title{
+    display: flex;
+    margin: auto;
+    align-items: center;
+    padding-left:100px;
   }
   
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
+  .card{
+    height: 100%;
   }
-  /* -------------手機版------------- */
-  @media screen and (max-width:768px){
-    h2{
-      font-size: 16px;
-      margin-left: 30px;
-    }
-    .allproduct{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-    }
-    .product-card{
-        width: 100%;
-        box-sizing: border-box;
-        padding: 10px;
-        margin: auto;
-        text-align: center;
-        
-    }
-    .product-pic{
-        width: 100%;
-        height: 160px;
-        position: relative;
-        overflow: hidden;
-        display: flex;
-        margin: auto;
-        cursor: pointer;
-    }
-    .product-card .input-num{
-      width: 30px;
-    }
-    .producttext a{
-      font-size: 12px;
-    }
-    .producttext p{
-      font-size: 10px;
-    }
-    .producttext span{
-      font-size: 12px;
-    }
-    /* -------------蓋板------------- */
-    .card{
-      padding-top: 20%;
-      height: 100%;
-    }
-    .card-content{
-      width: 60%;
-      margin: auto;
-    }
-    .card-pic{
-      width: 100%;
-    }
-    .card h3{
-      font-size: 12px;
-    }
-    .card-txt .content{
-      font-size: 12px;
-      width: 100%;
-    }
-    .card-txt li{
-      font-size: 10px;
-    }
-    .discount{
-      display: none;
-    }
-    .card-price p{
-      font-size: 14px;
-    }
-    .close{
-      font-size: 20px;
-    }
-    .product-card .cart{
-        padding: 30px;
-    }
-    .product-card .minus ,.product-card .plus{
-      width: 15px;
-    }
-    .cart-btn .btn{
-        font-size: 12px;
-    }
+  .card-content{
+    display: flex;
   }
-/* -------------桌機版------------- */
-  @media screen and (min-width:769px){
-    .product-box .title{
-      display: flex;
-      margin: auto;
-      align-items: center;
-      padding-left:100px;
-    }
-    .product-card .cart{
-        padding: 20px;
-    }
-    .card{
-      height: 100%;
-    }
-    .card-content{
-      display: flex;
-    }
-    .product-card img{
-      height: 230px;
-    }
-    .card-pic{
-      width: 250px;
-      display: flex;
-      align-items: center;
+  .product-card img{
+    height: 230px;
   }
-    .card-txt{
-      width: 300px;
-    }
-    .card-txt li{
-      line-height: 25px;
-    }
-    .close{
-      margin-right: 10px;
-    }
-    .cart-icon{
-      padding-top: 40px;
-    }
-    .cart-btn{
-      padding-top: 30px;
-    }
+  .card-pic{
+    width: 250px;
+    display: flex;
+    align-items: center;
+}
+  .card-txt{
+    width: 300px;
   }
+  .card-txt li{
+    line-height: 25px;
+  }
+  .close{
+    margin-right: 10px;
+  }
+  .cart .input-num{
+  text-align: center;
+  width: 100px;
+  border: none;
+}
+.cart-icon{
+    padding: 8px;
+  }
+.cart-icon .minus, .cart-icon .plus{
+  border: none;
+  font-size: 20px;
+  
+}
+.cart-btn{
+    padding: 8px;
+  }
+  .cart-btn .btn{
+    width: 100px;
+    background-color:#784A43;
+    padding: 3px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+}
+}

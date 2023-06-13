@@ -66,17 +66,22 @@
     .news-card{
         display: flex;
         margin: auto;
+        width: 350px;
         flex-direction: column;
-        width: 300px;
         margin-top: 30px;
     }
     .news-card img{
-        width: 180px;
+        width: 240px;
+        height: 200px;
 
     }
     .news-txt{
         text-align: center;
+        justify-content: center;
         line-height: 30px;
+    }
+    .news-txt h3{
+        font-size: 14px;
     }
     .news-txt p{
         display: none;

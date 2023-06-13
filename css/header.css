@@ -112,7 +112,7 @@ body{
         transition: .4s;
     }
     .nav-list-box{
-        width: 40%;
+        width: 60%;
         height: 100vh;
         background-color: #000;
         position: absolute;
@@ -153,7 +153,7 @@ body{
             
     }
     .icon-container a{
-        font-size: 10px;
+        font-size: 14px;
     }
 
 }

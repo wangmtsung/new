@@ -109,7 +109,7 @@ background-image: url(../pic/background.png);
     display: none;
     float: right;
     cursor: pointer;
-    padding-top: 15px;
+    padding-top: 10px;
     z-index: 3;
 }
 
@@ -133,7 +133,7 @@ background-image: url(../pic/background.png);
     transition: .4s;
 }
 .nav-list-box{
-    width: 40%;
+    width: 60%;
     height: 100vh;
     background-color: #000;
     position: fixed;
@@ -168,7 +168,7 @@ background-image: url(../pic/background.png);
     margin-right: 10px;
 }
 .icon-container a{
-    font-size: 10px;
+    font-size: 14px;
     color: white;
     padding: 5px;
 }
@@ -186,14 +186,14 @@ background-image: url(../pic/background.png);
     color: #A61F1F;
     letter-spacing: 5px;
     text-align: center;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bolder;
 }
 .about .signature{
     color: #784A43;
     font-size: 12px;
     padding: 2px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 .about-text{
     display: flex;
@@ -202,8 +202,8 @@ background-image: url(../pic/background.png);
     margin: auto;
     padding: 10px;
     justify-content: center;
-    font-size: 12px;
-    letter-spacing: 3px;
+    font-size: 13px;
+    letter-spacing: 1px;
 }
 .about-text span{
     display: none;
@@ -250,13 +250,13 @@ background-image: url(../pic/background.png);
     width: 350px;
     display: flex;
     margin: auto;
-    margin-top: 10%;
+    margin-top: 15%;
     text-align: center;
     justify-content: center;
 }
 .promise .text p{
     color: white;
-    font-size: 8px;
+    font-size: 12px;
 }
 .promise .icon-block{
     display: flex;
@@ -311,7 +311,7 @@ background-image: url(../pic/background.png);
 }
 .news-txt span{
     color: #A61F1F;
-    font-size: 12px;
+    font-size: 13px;
 }
 .news-title{
     margin: auto;
@@ -326,7 +326,7 @@ background-image: url(../pic/background.png);
 .news-title span{
     color: black;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 13px;
     letter-spacing: 0;
     padding-top: 2px;
 }
@@ -405,7 +405,7 @@ background-image: url(../pic/background.png);
     color: #784A43;
 }
 .combo-txt p{
-    font-size: 12px;
+    font-size: 13px;
     color: #A61F1F;
 }
 .combo-txt span{
