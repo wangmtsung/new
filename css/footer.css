@@ -46,7 +46,9 @@
 }
 .footer-text{
     background-color:#A61F1F;
-    margin: 10px;
+    width: fit-content;
+    justify-items: center;
+    margin: auto;
     padding: 5px;
     color: white;
 }
@@ -81,14 +83,15 @@
         margin-left: 200px;
         width: 60px;
     }
-    .footer-block{
+    .footer-list{
         margin-left: 650px;
     }
     .footer-list a{
         font-size: 14px;
     }
-    .footer-text{
+    .footer-text p{
         font-size: 12px;
+        align-items: center;
     }
     #myBtn {
         position: fixed; 

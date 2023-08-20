@@ -10,58 +10,6 @@ body{
 background-image: url(../pic/background.png);
 }
 
-/* -------------頁尾------------- */
-.main-footer{
-    margin-top: 40px;
-    width: 100%;
-    height: 120px;
-    background-color:#784A43;
-    display: flex;
-
-}
-.footer{
-    margin: 10px;
-
-}
-.footer-block{
-    display:flex;
-    justify-content: space-around;
-    flex-direction: column;
-
-}
-.footer .footer-item{
-    display: flex;
-    width: 500px;
-    text-align: center;
-    line-height: 30px;
-}
-.footer-logo img{
-    width: 100%;
-}
-.footer-icon{
-    display: flex;
-    justify-content: space-around;
-}
-.footer-block .footer-list{
-    display:flex;
-    padding: 5px;
-}
-.footer-list a{
-    color: aliceblue;
-    text-decoration: none;
-    margin: 5px;
-}
-.footer-icon a{
-    color: white;
-    padding: 2px;
-}
-.footer-text{
-    background-color:#A61F1F;
-    margin: 10px;
-    padding: 5px;
-    color: white;
-}
-
 /* -------------往上按鈕------------- */
 #myBtn {
     display: none; 
@@ -473,29 +421,6 @@ background-image: url(../pic/background.png);
 .read-more a{
     text-decoration: none;
 }
-
-/* -------------頁尾------------- */
-.footer-list a{
-    font-size: 12px;
-}
-.footer-logo{
-    width: 50px;
-}
-.footer-text p {
-    font-size: 10px;
-}
-
-.footer-block{
-    align-items: end;
-    margin-left: 20px;
-    width: 300px;
-}
-#myBtn{
-    position: fixed; 
-    bottom: 120px; 
-    right: 10px; 
-}
-
 
 }
 
@@ -933,26 +858,6 @@ background-image: url(../pic/background.png);
     }
     .read-more a{
         text-decoration: none;
-    }
-
-    /* -------------頁尾------------- */
-    .footer{
-        margin-left: 200px;
-        width: 60px;
-    }
-    .footer-block{
-        margin-left: 650px;
-    }
-    .footer-list a{
-        font-size: 14px;
-    }
-    .footer-text{
-        font-size: 12px;
-    }
-    #myBtn {
-        position: fixed; 
-        bottom: 30px; 
-        right: 50px; 
     }
 
 }
